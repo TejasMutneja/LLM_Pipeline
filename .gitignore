@@ -1,0 +1,28 @@
+# Environment variables - DO NOT COMMIT THIS FILE if it contains secrets
+.env
+
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE and OS files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Log files (if you create any)
+*.log
+
+# Output files (optional - decide if you want to track these in Git)
+# If you want to version your output files, remove these lines or comment them out
+# *.json
+# *.csv
