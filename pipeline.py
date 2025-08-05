@@ -14,7 +14,7 @@ from datasets import load_dataset
 load_dotenv()
 
 # Configure LangSmith tracing
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
 os.environ["LANGCHAIN_PROJECT"] = os.environ.get("LANGCHAIN_PROJECT", "TogetherAI_Debate_Parser_Fix_Eval")
 
 # Initialize the OpenAI client to point to Together AI
@@ -86,7 +86,7 @@ def critique_and_revise_answer(model_name: str, question_text: str, options_text
 # Block 3: Orchestrator function (Updated to accept verbose flag)
 @traceable(run_type="chain")
 def mmlu_pipeline(question_data: dict, verbose: bool = False):
-    MAX_ROUNDS = 20
+    MAX_ROUNDS = 10
     question_text = question_data["question"]
     options_text = "\n".join([f"({k}) {v}" for k, v in question_data["options"].items()])
 
@@ -165,16 +165,17 @@ def get_letter_from_output(text_output: str | None):
 # ---
 
 # Block 5: Dataset Loading, Evaluation Loop, Metrics, and Saving Results
+
 if __name__ == "__main__":
     # --- SCRIPT CONFIGURATION ---
-    VERBOSE = False # <<< SET THIS TO False FOR CLEAN OUTPUT, True FOR DETAILED DEBUGGING
+    VERBOSE = False 
     DATASET_NAME = "cais/mmlu"
     DATASET_CONFIG = "all"
     NUM_QUESTIONS_TO_PROCESS = 1000
     SHUFFLE_SEED = 42
     # ---------------------------
 
-    print(f"Starting evaluation for {NUM_QUESTIONS_TO_PROCESS} questions from '{DATASET_NAME}'...")
+    print(f"Starting evaluation for {NUM_QUESTIONS_TO_PROCESS} questions from '{DATASET_NAME}' ({DATASET_CONFIG} subset)...")
     
     hf_dataset = None
     try:
@@ -187,10 +188,9 @@ if __name__ == "__main__":
         print(f"Failed to load dataset from Hugging Face: {e}\nExiting.")
         exit()
 
-    print(f"--- Starting Pipeline Evaluation using Together AI ---")
+    print(f"--- Starting Iterative Debate Pipeline Evaluation using Together AI ---")
     
-    all_results = []
-    option_letters = ["A", "B", "C", "D", "E"]
+    all_results, option_letters = [], ["A", "B", "C", "D", "E"]
 
     for i, item in enumerate(hf_dataset):
         if not VERBOSE:
@@ -208,7 +208,6 @@ if __name__ == "__main__":
         if VERBOSE: print(f"\n--- Processing Question {i+1}/{len(hf_dataset)} (ID: {question_data_for_pipeline['id']}) ---")
         
         try:
-            # Pass the verbose flag down to the pipeline
             pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
         except Exception as e:
             if VERBOSE: print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
@@ -221,35 +220,102 @@ if __name__ == "__main__":
     print("--- Evaluation Loop Finished ---")
     print(f"Processed {len(all_results)} questions.")
 
-    # --- Calculate Evaluation Metrics (Simplified for Debate pipeline) ---
+    ### --- METRICS BLOCK UPDATED --- ###
     total_questions_attempted = len(all_results)
     llm1_initial_correct_count, llm2_initial_correct_count, final_pipeline_correct_count, error_in_pipeline_count = 0, 0, 0, 0
+    initial_agreement_count = 0
+    initial_disagreement_count = 0
+    convergence_to_correct_count = 0
+
     if total_questions_attempted > 0:
         for res in all_results:
             if res['pipeline_output_details'].get('final_answer_for_evaluation') == "ERROR":
                 error_in_pipeline_count +=1; continue
+            
             initial_answers = res['pipeline_output_details'].get('discussion_history', [{}])[0]
             llm1_initial_letter = get_letter_from_output(initial_answers.get('llm1_answer'))
             llm2_initial_letter = get_letter_from_output(initial_answers.get('llm2_answer'))
             final_answer_letter = get_letter_from_output(res['pipeline_output_details']['final_answer_for_evaluation'])
             correct_letter = res['correct_answer_letter']
+            
             if llm1_initial_letter == correct_letter: llm1_initial_correct_count += 1
             if llm2_initial_letter == correct_letter: llm2_initial_correct_count += 1
             if final_answer_letter == correct_letter: final_pipeline_correct_count += 1
+
+            if llm1_initial_letter is not None and llm1_initial_letter == llm2_initial_letter:
+                initial_agreement_count += 1
+            else:
+                initial_disagreement_count += 1
+                # A "successful correction" means an initial disagreement resolved to the correct answer.
+                if final_answer_letter == correct_letter:
+                    convergence_to_correct_count += 1
         
         valid_runs_for_metrics = total_questions_attempted - error_in_pipeline_count
         print("\n--- Final Evaluation Summary (Iterative Debate Pipeline) ---")
         if error_in_pipeline_count > 0: print(f"Pipeline Errors: {error_in_pipeline_count}/{total_questions_attempted}")
         
         if valid_runs_for_metrics > 0:
+            # Calculate base accuracies
             p_llm1 = llm1_initial_correct_count / valid_runs_for_metrics
-            p_llm2 = llm2_initial_correct_count / valid_runs_for_metrics
             p_final = final_pipeline_correct_count / valid_runs_for_metrics
-            print(f"LLM1 Initial Accuracy  : {p_llm1:.2%}")
-            print(f"LLM2 Initial Accuracy  : {p_llm2:.2%}")
-            print("-" * 30)
-            print(f"Final Pipeline Accuracy: {p_final:.2%}")
-            print(f"\nImprovement over LLM1: {p_final - p_llm1:+.2%}")
-            print(f"Improvement over LLM2: {p_final - p_llm2:+.2%}")
-        else: print("No valid runs completed to calculate metrics.")
-    else: print("No questions processed.")
+            
+            # Calculate sigma (standard error) for initial vs final
+            sigma1 = math.sqrt(p_llm1 * (1 - p_llm1) / valid_runs_for_metrics) if valid_runs_for_metrics > 0 else 0
+            sigma_final = math.sqrt(p_final * (1 - p_final) / valid_runs_for_metrics) if valid_runs_for_metrics > 0 else 0
+            
+            # Calculate total sigma and significance of the improvement over LLM1
+            total_sigma_vs_llm1 = math.sqrt(sigma1**2 + sigma_final**2) if (sigma1 > 0 or sigma_final > 0) else 0
+            improvement_vs_llm1 = p_final - p_llm1
+            significance_vs_llm1 = improvement_vs_llm1 / total_sigma_vs_llm1 if total_sigma_vs_llm1 > 0 else float('inf')
+
+            print(f"LLM1 Initial Accuracy         : {p_llm1:.2%} (± {sigma1:.2%})")
+            print(f"Final Pipeline Accuracy       : {p_final:.2%} (± {sigma_final:.2%})")
+            print("-" * 40)
+            print(f"Improvement over LLM1         : {improvement_vs_llm1:+.2%}")
+            print(f"Significance vs LLM1          : {significance_vs_llm1:.2f} sigma")
+            if abs(significance_vs_llm1) < 1.96: print("(Improvement over LLM1 is NOT statistically significant)")
+            else: print("(Improvement over LLM1 IS statistically significant)")
+            
+            # Add other relevant debate metrics
+            print("\n--- Debate Process Metrics ---")
+            print(f"Initial Agreement Rate        : {initial_agreement_count / valid_runs_for_metrics:.2%}")
+            if initial_disagreement_count > 0:
+                print(f"Convergence to Correct Rate   : {convergence_to_correct_count / initial_disagreement_count:.2%} ({convergence_to_correct_count}/{initial_disagreement_count})")
+            else:
+                print("No initial disagreements occurred to measure convergence.")
+        else: 
+            print("No valid runs completed to calculate metrics.")
+    else: 
+        print("No questions processed.")
+
+    # --- Storing results to JSON and CSV files ---
+    json_output_filename = "mmlu_debate_loop_eval_results_final.json"
+    csv_output_filename = "mmlu_debate_loop_eval_summary_final.csv"
+    try:
+        with open(json_output_filename, "w") as f: json.dump(all_results, f, indent=4)
+        print(f"\n✅ Successfully saved detailed results to {json_output_filename}")
+    except Exception as e: print(f"\n❌ Error saving results to JSON: {e}")
+    try:
+        with open(csv_output_filename, "w", newline="", encoding="utf-8") as f:
+            # ... (CSV writing logic is unchanged)
+            fieldnames = [
+                "id", "question", "options_A", "options_B", "options_C", "options_D", "options_E", 
+                "correct_answer_letter", "full_pipeline_output_details_json"
+            ]
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
+            writer.writeheader()
+            for res_item in all_results:
+                row = {
+                    "id": res_item.get("id"),
+                    "question": res_item.get("question"),
+                    "options_A": res_item.get("options", {}).get("A"),
+                    "options_B": res_item.get("options", {}).get("B"),
+                    "options_C": res_item.get("options", {}).get("C"),
+                    "options_D": res_item.get("options", {}).get("D"),
+                    "options_E": res_item.get("options", {}).get("E"),
+                    "correct_answer_letter": res_item.get("correct_answer_letter"),
+                    "full_pipeline_output_details_json": json.dumps(res_item.get("pipeline_output_details"))
+                }
+                writer.writerow(row)
+        print(f"✅ Successfully saved summary results to {csv_output_filename}")
+    except Exception as e: print(f"\n❌ Error saving results to CSV: {e}")
