@@ -31,8 +31,8 @@ client = OpenAI(
 # ---
 
 # Block 2: Worker Functions (Updated to accept verbose flag)
-LLM1_MODEL = "meta-llama/Llama-3-8b-chat-hf"
-LLM2_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+LLM1_MODEL = "meta-llama/Llama-3.2-3B-Instruct-Turbo"  # Use serverless model
+LLM2_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"  # Use serverless model
 
 @traceable
 def generate_answer(model_name: str, question_text: str, options_text: str, verbose: bool = False):
@@ -166,55 +166,125 @@ def get_letter_from_output(text_output: str | None):
 
 # Block 5: Dataset Loading, Evaluation Loop, Metrics, and Saving Results
 
+def load_squad_mcq_questions(filepath: str, max_questions: int = None):
+    """Load SQuAD MCQ questions from JSON file."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            questions = json.load(f)
+        
+        if max_questions and len(questions) > max_questions:
+            questions = questions[:max_questions]
+            
+        print(f"Loaded {len(questions)} SQuAD MCQ questions from {filepath}")
+        return questions
+        
+    except FileNotFoundError:
+        print(f"ERROR: SQuAD MCQ file '{filepath}' not found.")
+        print("Please run 'python squad_to_mcq_converter.py' first to generate MCQ questions.")
+        return None
+    except Exception as e:
+        print(f"ERROR loading SQuAD MCQ questions: {e}")
+        return None
+
 if __name__ == "__main__":
     # --- SCRIPT CONFIGURATION ---
     VERBOSE = False 
+    
+    # SQuAD MCQ Configuration
+    USE_SQUAD_MCQ = True
+    SQUAD_MCQ_FILE = "squad_mcq_questions.json"
+    NUM_QUESTIONS_TO_PROCESS = 50  # Reduced default since we're generating MCQs
+    
+    # Fallback MMLU Configuration (if SQuAD MCQ not available)
     DATASET_NAME = "cais/mmlu"
     DATASET_CONFIG = "all"
-    NUM_QUESTIONS_TO_PROCESS = 1000
     SHUFFLE_SEED = 42
     # ---------------------------
 
-    print(f"Starting evaluation for {NUM_QUESTIONS_TO_PROCESS} questions from '{DATASET_NAME}' ({DATASET_CONFIG} subset)...")
-    
-    hf_dataset = None
-    try:
-        full_subject_dataset = load_dataset(DATASET_NAME, DATASET_CONFIG, split="test", trust_remote_code=True)
-        shuffled_dataset = full_subject_dataset.shuffle(seed=SHUFFLE_SEED)
-        if len(shuffled_dataset) < NUM_QUESTIONS_TO_PROCESS: hf_dataset = shuffled_dataset
-        else: hf_dataset = shuffled_dataset.select(range(NUM_QUESTIONS_TO_PROCESS))
-        print(f"Loaded and shuffled {len(hf_dataset)} questions.")
-    except Exception as e:
-        print(f"Failed to load dataset from Hugging Face: {e}\nExiting.")
-        exit()
+    if USE_SQUAD_MCQ:
+        print(f"Loading SQuAD MCQ questions from '{SQUAD_MCQ_FILE}'...")
+        
+        # Load SQuAD MCQ questions
+        mcq_questions = load_squad_mcq_questions(SQUAD_MCQ_FILE, NUM_QUESTIONS_TO_PROCESS)
+        
+        if mcq_questions is None:
+            print("Falling back to MMLU dataset...")
+            USE_SQUAD_MCQ = False
+        else:
+            print(f"Starting evaluation for {len(mcq_questions)} SQuAD MCQ questions...")
+
+    if not USE_SQUAD_MCQ:
+        # Fallback to original MMLU dataset loading
+        print(f"Starting evaluation for {NUM_QUESTIONS_TO_PROCESS} questions from '{DATASET_NAME}' ({DATASET_CONFIG} subset)...")
+        
+        try:
+            full_subject_dataset = load_dataset(DATASET_NAME, DATASET_CONFIG, split="test", trust_remote_code=True)
+            shuffled_dataset = full_subject_dataset.shuffle(seed=SHUFFLE_SEED)
+            if len(shuffled_dataset) < NUM_QUESTIONS_TO_PROCESS: 
+                hf_dataset = shuffled_dataset
+            else: 
+                hf_dataset = shuffled_dataset.select(range(NUM_QUESTIONS_TO_PROCESS))
+            print(f"Loaded and shuffled {len(hf_dataset)} questions.")
+        except Exception as e:
+            print(f"Failed to load dataset from Hugging Face: {e}\nExiting.")
+            exit()
 
     print(f"--- Starting Iterative Debate Pipeline Evaluation using Together AI ---")
     
     all_results, option_letters = [], ["A", "B", "C", "D", "E"]
 
-    for i, item in enumerate(hf_dataset):
-        if not VERBOSE:
-            print(f"Processing question {i+1}/{len(hf_dataset)}...", end='\r')
-        
-        question_text = item["question"]
-        current_options = {option_letters[idx]: text for idx, text in enumerate(item["choices"]) if idx < len(option_letters)}
-        if not current_options: continue
-        
-        correct_answer_index = item["answer"]
-        correct_answer_letter = option_letters[correct_answer_index] if 0 <= correct_answer_index < len(current_options) else "N/A"
+    # Process questions based on source
+    if USE_SQUAD_MCQ:
+        # Process SQuAD MCQ questions
+        for i, mcq_item in enumerate(mcq_questions):
+            if not VERBOSE:
+                print(f"Processing question {i+1}/{len(mcq_questions)}...", end='\r')
+            
+            question_data_for_pipeline = {
+                "id": mcq_item["id"], 
+                "question": mcq_item["question"], 
+                "options": mcq_item["options"], 
+                "correct_answer_letter": mcq_item["correct_answer_letter"]
+            }
+            
+            if VERBOSE: 
+                print(f"\n--- Processing SQuAD MCQ Question {i+1}/{len(mcq_questions)} (ID: {question_data_for_pipeline['id']}) ---")
+            
+            try:
+                pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
+            except Exception as e:
+                if VERBOSE: 
+                    print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
+                pipeline_output = {"final_answer_for_evaluation": "ERROR"}
+            
+            result_summary = {**question_data_for_pipeline, "pipeline_output_details": pipeline_output}
+            all_results.append(result_summary)
+    
+    else:
+        # Process MMLU questions (original logic)
+        for i, item in enumerate(hf_dataset):
+            if not VERBOSE:
+                print(f"Processing question {i+1}/{len(hf_dataset)}...", end='\r')
+            
+            question_text = item["question"]
+            current_options = {option_letters[idx]: text for idx, text in enumerate(item["choices"]) if idx < len(option_letters)}
+            if not current_options: continue
+            
+            correct_answer_index = item["answer"]
+            correct_answer_letter = option_letters[correct_answer_index] if 0 <= correct_answer_index < len(current_options) else "N/A"
 
-        question_data_for_pipeline = {"id": f"hf_{DATASET_CONFIG}_{SHUFFLE_SEED}_{i+1}", "question": question_text, "options": current_options, "correct_answer_letter": correct_answer_letter}
-        
-        if VERBOSE: print(f"\n--- Processing Question {i+1}/{len(hf_dataset)} (ID: {question_data_for_pipeline['id']}) ---")
-        
-        try:
-            pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
-        except Exception as e:
-            if VERBOSE: print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
-            pipeline_output = {"final_answer_for_evaluation": "ERROR"}
-        
-        result_summary = {**question_data_for_pipeline, "pipeline_output_details": pipeline_output}
-        all_results.append(result_summary)
+            question_data_for_pipeline = {"id": f"hf_{DATASET_CONFIG}_{SHUFFLE_SEED}_{i+1}", "question": question_text, "options": current_options, "correct_answer_letter": correct_answer_letter}
+            
+            if VERBOSE: print(f"\n--- Processing Question {i+1}/{len(hf_dataset)} (ID: {question_data_for_pipeline['id']}) ---")
+            
+            try:
+                pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
+            except Exception as e:
+                if VERBOSE: print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
+                pipeline_output = {"final_answer_for_evaluation": "ERROR"}
+            
+            result_summary = {**question_data_for_pipeline, "pipeline_output_details": pipeline_output}
+            all_results.append(result_summary)
 
     print("\n" + "="*50)
     print("--- Evaluation Loop Finished ---")
@@ -251,7 +321,8 @@ if __name__ == "__main__":
                     convergence_to_correct_count += 1
         
         valid_runs_for_metrics = total_questions_attempted - error_in_pipeline_count
-        print("\n--- Final Evaluation Summary (Iterative Debate Pipeline) ---")
+        dataset_name_display = "SQuAD MCQ" if USE_SQUAD_MCQ else "MMLU"
+        print(f"\n--- Final Evaluation Summary ({dataset_name_display} - Iterative Debate Pipeline) ---")
         if error_in_pipeline_count > 0: print(f"Pipeline Errors: {error_in_pipeline_count}/{total_questions_attempted}")
         
         if valid_runs_for_metrics > 0:
@@ -289,8 +360,9 @@ if __name__ == "__main__":
         print("No questions processed.")
 
     # --- Storing results to JSON and CSV files ---
-    json_output_filename = "mmlu_debate_loop_eval_results_final.json"
-    csv_output_filename = "mmlu_debate_loop_eval_summary_final.csv"
+    dataset_type = "squad_mcq" if USE_SQUAD_MCQ else "mmlu"
+    json_output_filename = f"{dataset_type}_debate_loop_eval_results_final.json"
+    csv_output_filename = f"{dataset_type}_debate_loop_eval_summary_final.csv"
     try:
         with open(json_output_filename, "w") as f: json.dump(all_results, f, indent=4)
         print(f"\n✅ Successfully saved detailed results to {json_output_filename}")
