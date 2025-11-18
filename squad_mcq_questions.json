@@ -3,12 +3,12 @@
     "id": "squad_mcq_1",
     "question": "Context: Private schooling in the United States has been debated by educators, lawmakers and parents, since the beginnings of compulsory education in Massachusetts in 1852. The Supreme Court precedent appears to favor educational choice, so long as states may set standards for educational accomplishment. Some of the most relevant Supreme Court case law on this is as follows: Runyon v. McCrary, 427 U.S. 160 (1976); Wisconsin v. Yoder, 406 U.S. 205 (1972); Pierce v. Society of Sisters, 268 U.S. 510 (1925); Meyer v. Nebraska, 262 U.S. 390 (1923).\n\nQuestion: In what year did Massachusetts first require children to be educated in schools?",
     "options": {
-      "A": "Massachusetts first introduced the concept of compulsory education in 1847.",
-      "B": "The Massachusetts Education Act was passed in 1860, requiring children to attend school.",
-      "C": "1852",
-      "D": "The Massachusetts state legislature established the first public school system in 1875, marking the beginning of compulsory education."
+      "A": "1865",
+      "B": "1882",
+      "C": "1915",
+      "D": "1852"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "Private schooling in the United States has been debated by educators, lawmakers and parents, since the beginnings of compulsory education in Massachusetts in 1852. The Supreme Court precedent appears to favor educational choice, so long as states may set standards for educational accomplishment. Some of the most relevant Supreme Court case law on this is as follows: Runyon v. McCrary, 427 U.S. 160 (1976); Wisconsin v. Yoder, 406 U.S. 205 (1972); Pierce v. Society of Sisters, 268 U.S. 510 (1925); Meyer v. Nebraska, 262 U.S. 390 (1923).",
       "question": "In what year did Massachusetts first require children to be educated in schools?",
@@ -20,7 +20,7 @@
     "id": "squad_mcq_2",
     "question": "Context: The chloroplast membranes sometimes protrude out into the cytoplasm, forming a stromule, or stroma-containing tubule. Stromules are very rare in chloroplasts, and are much more common in other plastids like chromoplasts and amyloplasts in petals and roots, respectively. They may exist to increase the chloroplast's surface area for cross-membrane transport, because they are often branched and tangled with the endoplasmic reticulum. When they were first observed in 1962, some plant biologists dismissed the structures as artifactual, claiming that stromules were just oddly shaped chloroplasts with constricted regions or dividing chloroplasts. However, there is a growing body of evidence that stromules are functional, integral features of plant cell plastids, not merely artifacts.\n\nQuestion: When were stromules discovered?",
     "options": {
-      "A": "1959",
+      "A": "1958",
       "B": "1962",
       "C": "1970",
       "D": "1985"
@@ -38,9 +38,9 @@
     "question": "Context: Not only the work of British artists and craftspeople is on display, but also work produced by European artists that was purchased or commissioned by British patrons, as well as imports from Asia, including porcelain, cloth and wallpaper. Designers and artists whose work is on display in the galleries include Gian Lorenzo Bernini, Grinling Gibbons, Daniel Marot, Louis Laguerre, Antonio Verrio, Sir James Thornhill, William Kent, Robert Adam, Josiah Wedgwood, Matthew Boulton, Canova, Thomas Chippendale, Pugin, William Morris. Patrons who have influenced taste are also represented by works of art from their collections, these include: Horace Walpole (a major influence on the Gothic Revival), William Thomas Beckford and Thomas Hope.\n\nQuestion: Which artist who had a major influence on the Gothic Revival is represented in the V&A's British galleries?",
     "options": {
       "A": "Horace Walpole",
-      "B": "Not Horace Walpole",
-      "C": "Alternative to Horace Walpole",
-      "D": "Different from Horace Walpole"
+      "B": "Horace Walpole's nephew, Horace Walpole Sr.",
+      "C": "Alexander Pope, a prominent British poet",
+      "D": "Richard Beadle, a prominent patron of the arts"
     },
     "correct_answer_letter": "A",
     "original_squad_data": {
@@ -54,12 +54,12 @@
     "id": "squad_mcq_4",
     "question": "Context: In the 1890s, the University of Chicago, fearful that its vast resources would injure smaller schools by drawing away good students, affiliated with several regional colleges and universities: Des Moines College, Kalamazoo College, Butler University, and Stetson University. In 1896, the university affiliated with Shimer College in Mount Carroll, Illinois. Under the terms of the affiliation, the schools were required to have courses of study comparable to those at the university, to notify the university early of any contemplated faculty appointments or dismissals, to make no faculty appointment without the university's approval, and to send copies of examinations for suggestions. The University of Chicago agreed to confer a degree on any graduating senior from an affiliated school who made a grade of A for all four years, and on any other graduate who took twelve weeks additional study at the University of Chicago. A student or faculty member of an affiliated school was entitled to free tuition at the University of Chicago, and Chicago students were eligible to attend an affiliated school on the same terms and receive credit for their work. The University of Chicago also agreed to provide affiliated schools with books and scientific apparatus and supplies at cost; special instructors and lecturers without cost except travel expenses; and a copy of every book and journal published by the University of Chicago Press at no cost. The agreement provided that either party could terminate the affiliation on proper notice. Several University of Chicago professors disliked the program, as it involved uncompensated additional labor on their part, and they believed it cheapened the academic reputation of the university. The program passed into history by 1910.\n\nQuestion: In 1890, who did the university decide to team up with?",
     "options": {
-      "A": "Des Moines College and Stetson University",
-      "B": "several regional colleges and universities",
-      "C": "The city of Des Moines",
-      "D": "The American Association of Colleges"
+      "A": "major state universities",
+      "B": "prestigious liberal arts colleges",
+      "C": "regional community colleges",
+      "D": "several regional colleges and universities"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "In the 1890s, the University of Chicago, fearful that its vast resources would injure smaller schools by drawing away good students, affiliated with several regional colleges and universities: Des Moines College, Kalamazoo College, Butler University, and Stetson University. In 1896, the university affiliated with Shimer College in Mount Carroll, Illinois. Under the terms of the affiliation, the schools were required to have courses of study comparable to those at the university, to notify the university early of any contemplated faculty appointments or dismissals, to make no faculty appointment without the university's approval, and to send copies of examinations for suggestions. The University of Chicago agreed to confer a degree on any graduating senior from an affiliated school who made a grade of A for all four years, and on any other graduate who took twelve weeks additional study at the University of Chicago. A student or faculty member of an affiliated school was entitled to free tuition at the University of Chicago, and Chicago students were eligible to attend an affiliated school on the same terms and receive credit for their work. The University of Chicago also agreed to provide affiliated schools with books and scientific apparatus and supplies at cost; special instructors and lecturers without cost except travel expenses; and a copy of every book and journal published by the University of Chicago Press at no cost. The agreement provided that either party could terminate the affiliation on proper notice. Several University of Chicago professors disliked the program, as it involved uncompensated additional labor on their part, and they believed it cheapened the academic reputation of the university. The program passed into history by 1910.",
       "question": "In 1890, who did the university decide to team up with?",
@@ -71,9 +71,9 @@
     "id": "squad_mcq_5",
     "question": "Context: After a punt from both teams, Carolina got on track with a 9-play, 73-yard scoring drive. Newton completed 4 of 4 passes for 51 yards and rushed twice for 25 yards, while Jonathan Stewart finished the drive with a 1-yard touchdown run, cutting the score to 10–7 with 11:28 left in the second quarter. Later on, Broncos receiver Jordan Norwood received Brad Nortman's short 28-yard punt surrounded by Panthers players, but none of them attempted to make a tackle, apparently thinking Norwood had called a fair catch. Norwood had not done so, and with no resistance around him, he took off for a Super Bowl record 61-yard return before Mario Addison dragged him down on the Panthers 14-yard line. Despite Denver's excellent field position, they could not get the ball into the end zone, so McManus kicked a 33-yard field goal that increased their lead to 13–7.\n\nQuestion: Who got a touchdown making the score 10-7?",
     "options": {
-      "A": "Newton scored on a 1-yard rush",
-      "B": "Cam Newton received a 1-yard touchdown pass from Cam Newton",
-      "C": "Newton threw a 1-yard TD pass to himself",
+      "A": "Newton scored a touchdown on a 1-yard run",
+      "B": "Jordan Norwood received a blocked punt and ran it in for a touchdown",
+      "C": "The Broncos' special teams unit scored a touchdown on a kickoff return",
       "D": "Jonathan Stewart"
     },
     "correct_answer_letter": "D",
@@ -89,9 +89,9 @@
     "question": "Context: In India, private schools are called independent schools, but since some private schools receive financial aid from the government, it can be an aided or an unaided school. So, in a strict sense, a private school is an unaided independent school. For the purpose of this definition, only receipt of financial aid is considered, not land purchased from the government at a subsidized rate. It is within the power of both the union government and the state governments to govern schools since Education appears in the Concurrent list of legislative subjects in the constitution. The practice has been for the union government to provide the broad policy directions while the states create their own rules and regulations for the administration of the sector. Among other things, this has also resulted in 30 different Examination Boards or academic authorities that conduct examinations for school leaving certificates. Prominent Examination Boards that are present in multiple states are the CBSE and the CISCE, NENBSE\n\nQuestion: How many Examination Boards exist in India?",
     "options": {
       "A": "30",
-      "B": "The CBSE, CISCE, and NENBSE are the three major Examination Boards, with many other smaller ones existing in the country.\",",
-      "C": "30 Examination Boards exist in India, with some states having multiple boards to ensure individualized education policy.\",",
-      "D": "As per the Indian Education Act of 2019, there are 30 Examination Boards in India, each responsible for a specific state or region."
+      "B": "25 Examination Boards exist in India, with the CBSE and CISCE being the two most prominent ones.",
+      "C": "There are approximately 40 Examination Boards in India, with the NENBSE being one of the major ones.",
+      "D": "The Examination Boards in India number around 50, with different boards conducting exams in various regions."
     },
     "correct_answer_letter": "A",
     "original_squad_data": {
@@ -105,12 +105,12 @@
     "id": "squad_mcq_7",
     "question": "Context: The Writers Guild of America strike that halted production of network programs for much of the 2007–08 season affected the network in 2007–08 and 2008–09, as various ABC shows that premiered in 2007, such as Dirty Sexy Money, Pushing Daisies, Eli Stone and Samantha Who?, did not live to see a third season; other series such as Boston Legal and the U.S. version of Life on Mars suffered from low viewership, despite the former, a spin off of The Practice, being a once-highlighted breakout series when it debuted in 2005. One of the network's strike-replacement programs during that time was the game show Duel, which premiered in December 2007. The program would become a minor success for the network during its initial six-episode run, which led ABC to renew Duel as a regular series starting in April 2008. However, Duel suffered from low viewership during its run as a regular series, and ABC canceled the program after sixteen episodes. On August 15, 2008, Disney denied rumors started by Caris & Co. that it would be selling the ten ABC owned-and-operated stations.\n\nQuestion: Who started rumors in 2008 that ABC would sell its ten owned-and-operated stations?",
     "options": {
-      "A": "Caris & Co. was a subsidiary of Disney at the time",
-      "B": "A rival media conglomerate",
-      "C": "A prominent media analyst with questionable motives",
-      "D": "Caris & Co."
+      "A": "Harris Interactive",
+      "B": "Caris & Co.",
+      "C": "The Hollywood Reporter",
+      "D": "Investor's Business Daily"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "The Writers Guild of America strike that halted production of network programs for much of the 2007–08 season affected the network in 2007–08 and 2008–09, as various ABC shows that premiered in 2007, such as Dirty Sexy Money, Pushing Daisies, Eli Stone and Samantha Who?, did not live to see a third season; other series such as Boston Legal and the U.S. version of Life on Mars suffered from low viewership, despite the former, a spin off of The Practice, being a once-highlighted breakout series when it debuted in 2005. One of the network's strike-replacement programs during that time was the game show Duel, which premiered in December 2007. The program would become a minor success for the network during its initial six-episode run, which led ABC to renew Duel as a regular series starting in April 2008. However, Duel suffered from low viewership during its run as a regular series, and ABC canceled the program after sixteen episodes. On August 15, 2008, Disney denied rumors started by Caris & Co. that it would be selling the ten ABC owned-and-operated stations.",
       "question": "Who started rumors in 2008 that ABC would sell its ten owned-and-operated stations?",
@@ -122,12 +122,12 @@
     "id": "squad_mcq_8",
     "question": "Context: CBS broadcast Super Bowl 50 in the U.S., and charged an average of $5 million for a 30-second commercial during the game. The Super Bowl 50 halftime show was headlined by the British rock group Coldplay with special guest performers Beyoncé and Bruno Mars, who headlined the Super Bowl XLVII and Super Bowl XLVIII halftime shows, respectively. It was the third-most watched U.S. broadcast ever.\n\nQuestion: Which network broadcasted the 50th Super Bowl game? ",
     "options": {
-      "A": "CBS",
-      "B": "NBC",
+      "A": "NBC",
+      "B": "ABC",
       "C": "FOX",
-      "D": "ABC"
+      "D": "CBS"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "CBS broadcast Super Bowl 50 in the U.S., and charged an average of $5 million for a 30-second commercial during the game. The Super Bowl 50 halftime show was headlined by the British rock group Coldplay with special guest performers Beyoncé and Bruno Mars, who headlined the Super Bowl XLVII and Super Bowl XLVIII halftime shows, respectively. It was the third-most watched U.S. broadcast ever.",
       "question": "Which network broadcasted the 50th Super Bowl game? ",
@@ -139,12 +139,12 @@
     "id": "squad_mcq_9",
     "question": "Context: In 1973, Nixon named William E. Simon as the first Administrator of the Federal Energy Office, a short-term organization created to coordinate the response to the embargo. Simon allocated states the same amount of domestic oil for 1974 that each had consumed in 1972, which worked for states whose populations were not increasing. In other states, lines at gasoline stations were common. The American Automobile Association reported that in the last week of February 1974, 20% of American gasoline stations had no fuel.\n\nQuestion: Why was this short termed organization created?",
     "options": {
-      "A": "coordinate the response to the embargo on foreign oil imports",
-      "B": "coordinate the response to the embargo",
-      "C": "coordinate the response to the growing demand for oil in the country",
-      "D": "coordinate the distribution of oil supplies within the United States"
+      "A": "coordinate the response to the embargo",
+      "B": "coordinate the response to the economic downturn",
+      "C": "provide financial assistance to states affected by population decline",
+      "D": "allocate resources for a national infrastructure project"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "In 1973, Nixon named William E. Simon as the first Administrator of the Federal Energy Office, a short-term organization created to coordinate the response to the embargo. Simon allocated states the same amount of domestic oil for 1974 that each had consumed in 1972, which worked for states whose populations were not increasing. In other states, lines at gasoline stations were common. The American Automobile Association reported that in the last week of February 1974, 20% of American gasoline stations had no fuel.",
       "question": "Why was this short termed organization created?",
@@ -157,9 +157,9 @@
     "question": "Context: There is evidence that there have been significant changes in Amazon rainforest vegetation over the last 21,000 years through the Last Glacial Maximum (LGM) and subsequent deglaciation. Analyses of sediment deposits from Amazon basin paleolakes and from the Amazon Fan indicate that rainfall in the basin during the LGM was lower than for the present, and this was almost certainly associated with reduced moist tropical vegetation cover in the basin. There is debate, however, over how extensive this reduction was. Some scientists argue that the rainforest was reduced to small, isolated refugia separated by open forest and grassland; other scientists argue that the rainforest remained largely intact but extended less far to the north, south, and east than is seen today. This debate has proved difficult to resolve because the practical limitations of working in the rainforest mean that data sampling is biased away from the center of the Amazon basin, and both explanations are reasonably well supported by the available data.\n\nQuestion: What does LGM stands for?",
     "options": {
       "A": "Last Glacial Maximum",
-      "B": "Late Glacial Minimum",
-      "C": "Long Glacial Maximum",
-      "D": "Little Green Movement"
+      "B": "Last Glacial Minimum",
+      "C": "Last Glacial Maximum Period",
+      "D": "Last Glacial Maximum Event"
     },
     "correct_answer_letter": "A",
     "original_squad_data": {
@@ -173,10 +173,10 @@
     "id": "squad_mcq_11",
     "question": "Context: In 1967, Manuel Blum developed an axiomatic complexity theory based on his axioms and proved an important result, the so-called, speed-up theorem. The field really began to flourish in 1971 when the US researcher Stephen Cook and, working independently, Leonid Levin in the USSR, proved that there exist practically relevant problems that are NP-complete. In 1972, Richard Karp took this idea a leap forward with his landmark paper, \"Reducibility Among Combinatorial Problems\", in which he showed that 21 diverse combinatorial and graph theoretical problems, each infamous for its computational intractability, are NP-complete.\n\nQuestion: What is the paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems?",
     "options": {
-      "A": "Karp's Graph Theoretical Breakthrough",
-      "B": "The Computational Complexity Conundrum",
+      "A": "A Study on the Computational Limits of Graph Algorithms",
+      "B": "The Impact of NP-Completeness on Combinatorial Optimization",
       "C": "\"Reducibility Among Combinatorial Problems\"",
-      "D": "An Exploration of NP-Equivalence"
+      "D": "A New Approach to Understanding the Limits of Algorithmic Search"
     },
     "correct_answer_letter": "C",
     "original_squad_data": {
@@ -191,11 +191,11 @@
     "question": "Context: The flow of cold, gray mountain water continues for some distance into the lake. The cold water flows near the surface and at first doesn't mix with the warmer, green waters of Upper Lake. But then, at the so-called Rheinbrech, the Rhine water abruptly falls into the depths because of the greater density of cold water. The flow reappears on the surface at the northern (German) shore of the lake, off the island of Lindau. The water then follows the northern shore until Hagnau am Bodensee. A small fraction of the flow is diverted off the island of Mainau into Lake Überlingen. Most of the water flows via the Constance hopper into the Rheinrinne (\"Rhine Gutter\") and Seerhein. Depending on the water level, this flow of the Rhine water is clearly visible along the entire length of the lake.\n\nQuestion: What Lake in a German island Mainau receives a fraction of the Rhine's flow?",
     "options": {
       "A": "Lake Constance",
-      "B": "Lake Überlingen",
-      "C": "Lake Starnberg",
-      "D": "Lake Wörthersee"
+      "B": "Lake Starnberg",
+      "C": "Lake Maggiore",
+      "D": "Lake Überlingen"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "The flow of cold, gray mountain water continues for some distance into the lake. The cold water flows near the surface and at first doesn't mix with the warmer, green waters of Upper Lake. But then, at the so-called Rheinbrech, the Rhine water abruptly falls into the depths because of the greater density of cold water. The flow reappears on the surface at the northern (German) shore of the lake, off the island of Lindau. The water then follows the northern shore until Hagnau am Bodensee. A small fraction of the flow is diverted off the island of Mainau into Lake Überlingen. Most of the water flows via the Constance hopper into the Rheinrinne (\"Rhine Gutter\") and Seerhein. Depending on the water level, this flow of the Rhine water is clearly visible along the entire length of the lake.",
       "question": "What Lake in a German island Mainau receives a fraction of the Rhine's flow?",
@@ -207,12 +207,12 @@
     "id": "squad_mcq_13",
     "question": "Context: ABC also owns the Times Square Studios at 1500 Broadway on land in Times Square owned by a development fund for the 42nd Street Project; opened in 1999, Good Morning America and Nightline are broadcast from this particular facility. ABC News has premises a little further on West 66th Street, in a six-story building occupying a 196 feet (60 m) × 379 feet (116 m) plot at 121–135 West End Avenue. The block of West End Avenue housing the ABC News building was renamed Peter Jennings Way in 2006 in honor of the recently deceased longtime ABC News chief anchor and anchor of World News Tonight.\n\nQuestion: What studio does ABC own at 1500 Broadway in NYC?",
     "options": {
-      "A": "Times Square Broadcast Center",
-      "B": "Times Square Studios",
-      "C": "ABC Studios at 42nd Street",
-      "D": "Good Morning America Studios"
+      "A": "The studio is actually located at ABC's headquarters at 77 West 66th Street",
+      "B": "The studio is housed in the Midtown West Complex at 485 Sixth Avenue",
+      "C": "The studio is leased from Sony Pictures Television at 175 Fifth Avenue",
+      "D": "Times Square Studios"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "ABC also owns the Times Square Studios at 1500 Broadway on land in Times Square owned by a development fund for the 42nd Street Project; opened in 1999, Good Morning America and Nightline are broadcast from this particular facility. ABC News has premises a little further on West 66th Street, in a six-story building occupying a 196 feet (60 m) × 379 feet (116 m) plot at 121–135 West End Avenue. The block of West End Avenue housing the ABC News building was renamed Peter Jennings Way in 2006 in honor of the recently deceased longtime ABC News chief anchor and anchor of World News Tonight.",
       "question": "What studio does ABC own at 1500 Broadway in NYC?",
@@ -224,12 +224,12 @@
     "id": "squad_mcq_14",
     "question": "Context: There are fifteen fraternities and seven sororities at the University of Chicago, as well as one co-ed community service fraternity, Alpha Phi Omega. Four of the sororities are members of the National Panhellenic Conference, and ten of the fraternities form the University of Chicago Interfraternity Council. In 2002, the Associate Director of Student Activities estimated that 8–10 percent of undergraduates were members of fraternities or sororities. The student activities office has used similar figures, stating that one in ten undergraduates participate in Greek life.\n\nQuestion: How many fraternities are apart of the university?",
     "options": {
-      "A": "fifteen",
-      "B": "ten",
-      "C": "thirteen",
-      "D": "forty"
+      "A": "thirteen",
+      "B": "fifteen and seven",
+      "C": "all of the university's student organizations",
+      "D": "fifteen"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "There are fifteen fraternities and seven sororities at the University of Chicago, as well as one co-ed community service fraternity, Alpha Phi Omega. Four of the sororities are members of the National Panhellenic Conference, and ten of the fraternities form the University of Chicago Interfraternity Council. In 2002, the Associate Director of Student Activities estimated that 8–10 percent of undergraduates were members of fraternities or sororities. The student activities office has used similar figures, stating that one in ten undergraduates participate in Greek life.",
       "question": "How many fraternities are apart of the university?",
@@ -241,12 +241,12 @@
     "id": "squad_mcq_15",
     "question": "Context: In 1965, the corporate entity, American Broadcasting-Paramount Theatres, was renamed as the American Broadcasting Companies,  while its cinema division became ABC Theatres;[citation needed] its recording division was renamed ABC Records in 1966. In December of that year, the ABC television network premiered The Dating Game, a pioneer series in its genre, which was a reworking of the blind date concept in which a suitor selected one of three contestants sight unseen based on the answers to selected questions. This was followed up in July 1966 by The Newlywed Game, featuring three recently married couples who guessed the responses to their partner's questions (some of which were fairly risque). As ABC began to outgrow its facilities at 7 West 66th Street, Goldenson found a new headquarters for ABC in a 44 story building located at 1330 Avenue of the Americas in Manhattan, at the corner of 54th Street (now occupied by The Financial Times's New York office). This operation allowed for the conversion of the premises at 66th Street into production facilities for television and radio programs.\n\nQuestion: At what address did Goldenson secure a new headquarters for ABC?",
     "options": {
-      "A": "1330 Avenue of the Americas in Manhattan",
-      "B": "The New York Times Building, 620 Eighth Avenue, Manhattan",
-      "C": "The Financial Times's New York office, 1450 Sixth Avenue, Manhattan",
-      "D": "The Dow Jones Building, 200 Liberty Street, Lower Manhattan"
+      "A": "1350 Avenue of the Americas in Manhattan",
+      "B": "1400 Avenue of the Americas in Manhattan",
+      "C": "1300 Avenue of the Americas in Manhattan",
+      "D": "1330 Avenue of the Americas in Manhattan"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "In 1965, the corporate entity, American Broadcasting-Paramount Theatres, was renamed as the American Broadcasting Companies,  while its cinema division became ABC Theatres;[citation needed] its recording division was renamed ABC Records in 1966. In December of that year, the ABC television network premiered The Dating Game, a pioneer series in its genre, which was a reworking of the blind date concept in which a suitor selected one of three contestants sight unseen based on the answers to selected questions. This was followed up in July 1966 by The Newlywed Game, featuring three recently married couples who guessed the responses to their partner's questions (some of which were fairly risque). As ABC began to outgrow its facilities at 7 West 66th Street, Goldenson found a new headquarters for ABC in a 44 story building located at 1330 Avenue of the Americas in Manhattan, at the corner of 54th Street (now occupied by The Financial Times's New York office). This operation allowed for the conversion of the premises at 66th Street into production facilities for television and radio programs.",
       "question": "At what address did Goldenson secure a new headquarters for ABC?",
@@ -259,9 +259,9 @@
     "question": "Context: Bolshevik leaders had effectively reestablished a polity with roughly the same extent as that empire by 1921, however with an internationalist ideology: Lenin in particular asserted the right to limited self-determination for national minorities within the new territory. Beginning in 1923, the policy of \"Indigenization\" [korenizatsiia] was intended to support non-Russians develop their national cultures within a socialist framework. Never formally revoked, it stopped being implemented after 1932. After World War II, the Soviet Union installed socialist regimes modeled on those it had installed in 1919–20 in the old Tsarist Empire in areas its forces occupied in Eastern Europe. The Soviet Union and the People’s Republic of China supported post–World War II communist movements in foreign nations and colonies to advance their own interests, but were not always successful.\n\nQuestion: Who had established the Russian empire to its former glory prior to 1921?",
     "options": {
       "A": "Bolshevik leaders",
-      "B": "Tsar Nicholas II had effectively reestablished the Russian empire to its former glory prior to 1921.",
-      "C": "The Russian Provisional Government had successfully reestablished a polity with roughly the same extent as the empire by 1921.",
-      "D": "The Russian Soviet Federative Socialist Republic had expanded its territory and reestablished the Russian empire to its former glory in 1920."
+      "B": "Tsarist leaders",
+      "C": "Early Soviet government",
+      "D": "Romanov dynasty"
     },
     "correct_answer_letter": "A",
     "original_squad_data": {
@@ -275,12 +275,12 @@
     "id": "squad_mcq_17",
     "question": "Context: The unproven Riemann hypothesis, dating from 1859, states that except for s = −2, −4, ..., all zeroes of the ζ-function have real part equal to 1/2. The connection to prime numbers is that it essentially says that the primes are as regularly distributed as possible.[clarification needed] From a physical viewpoint, it roughly states that the irregularity in the distribution of primes only comes from random noise. From a mathematical viewpoint, it roughly states that the asymptotic distribution of primes (about x/log x of numbers less than x are primes, the prime number theorem) also holds for much shorter intervals of length about the square root of x (for intervals near x). This hypothesis is generally believed to be correct. In particular, the simplest assumption is that primes should have no significant irregularities without good reason.\n\nQuestion: What does the Riemann hypothesis state the source of irregularity in the distribution of points comes from?",
     "options": {
-      "A": "physical imperfections",
-      "B": "computer algorithmic errors",
-      "C": "random noise",
-      "D": "mathematical inconsistencies"
+      "A": "mathematical proof by Gauss",
+      "B": "random noise",
+      "C": "the inherent nature of prime numbers",
+      "D": "the influence of the number π"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "The unproven Riemann hypothesis, dating from 1859, states that except for s = −2, −4, ..., all zeroes of the ζ-function have real part equal to 1/2. The connection to prime numbers is that it essentially says that the primes are as regularly distributed as possible.[clarification needed] From a physical viewpoint, it roughly states that the irregularity in the distribution of primes only comes from random noise. From a mathematical viewpoint, it roughly states that the asymptotic distribution of primes (about x/log x of numbers less than x are primes, the prime number theorem) also holds for much shorter intervals of length about the square root of x (for intervals near x). This hypothesis is generally believed to be correct. In particular, the simplest assumption is that primes should have no significant irregularities without good reason.",
       "question": "What does the Riemann hypothesis state the source of irregularity in the distribution of points comes from?",
@@ -292,12 +292,12 @@
     "id": "squad_mcq_18",
     "question": "Context: Luther's Small Catechism proved especially effective in helping parents teach their children; likewise the Larger Catechism was effective for pastors. Using the German vernacular, they expressed the Apostles' Creed in simpler, more personal, Trinitarian language. He rewrote each article of the Creed to express the character of the Father, the Son, or the Holy Spirit. Luther's goal was to enable the catechumens to see themselves as a personal object of the work of the three persons of the Trinity, each of which works in the catechumen's life. That is, Luther depicted the Trinity not as a doctrine to be learned, but as persons to be known. The Father creates, the Son redeems, and the Spirit sanctifies, a divine unity with separate personalities. Salvation originates with the Father and draws the believer to the Father. Luther's treatment of the Apostles' Creed must be understood in the context of the Decalogue (the Ten Commandments) and the Lord's Prayer, which are also part of the Lutheran catechical teaching.\n\nQuestion: Which work of Luther's is effective in teaching children?",
     "options": {
-      "A": "Larger Catechism",
-      "B": "Small Catechism",
-      "C": "Catechismus für Kinder",
-      "D": "Gospel of Matthew"
+      "A": "Small Catechism",
+      "B": "Larger Catechism",
+      "C": " creadle",
+      "D": "Gospel According to Luther"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "Luther's Small Catechism proved especially effective in helping parents teach their children; likewise the Larger Catechism was effective for pastors. Using the German vernacular, they expressed the Apostles' Creed in simpler, more personal, Trinitarian language. He rewrote each article of the Creed to express the character of the Father, the Son, or the Holy Spirit. Luther's goal was to enable the catechumens to see themselves as a personal object of the work of the three persons of the Trinity, each of which works in the catechumen's life. That is, Luther depicted the Trinity not as a doctrine to be learned, but as persons to be known. The Father creates, the Son redeems, and the Spirit sanctifies, a divine unity with separate personalities. Salvation originates with the Father and draws the believer to the Father. Luther's treatment of the Apostles' Creed must be understood in the context of the Decalogue (the Ten Commandments) and the Lord's Prayer, which are also part of the Lutheran catechical teaching.",
       "question": "Which work of Luther's is effective in teaching children?",
@@ -309,9 +309,9 @@
     "id": "squad_mcq_19",
     "question": "Context: One of the oldest depictions of civil disobedience is in Sophocles' play Antigone, in which Antigone, one of the daughters of former King of Thebes, Oedipus, defies Creon, the current King of Thebes, who is trying to stop her from giving her brother Polynices a proper burial. She gives a stirring speech in which she tells him that she must obey her conscience rather than human law. She is not at all afraid of the death he threatens her with (and eventually carries out), but she is afraid of how her conscience will smite her if she does not do this.\n\nQuestion: How was the civil disobedience shown in Antigone?",
     "options": {
-      "A": "defy the edict of the current King and demand a full state funeral for her brother",
-      "B": "follow the ancient customs of Thebes and refuse to bury her brother in a public cemetery",
-      "C": "put her brother's body on display as a warning to others who might challenge the current ruler",
+      "A": "defy human authority and follow her sense of morality",
+      "B": "prioritize her family's legacy over the current laws of Thebes",
+      "C": "stand by her faith in the gods and challenge Creon's rule",
       "D": "obey her conscience rather than human law"
     },
     "correct_answer_letter": "D",
@@ -326,12 +326,12 @@
     "id": "squad_mcq_20",
     "question": "Context: Development of the fertilized eggs is direct, in other words there is no distinctive larval form, and juveniles of all groups generally resemble miniature cydippid adults. In the genus Beroe the juveniles, like the adults, lack tentacles and tentacle sheaths. In most species the juveniles gradually develop the body forms of their parents. In some groups, such as the flat, bottom-dwelling platyctenids, the juveniles behave more like true larvae, as they live among the plankton and thus occupy a different ecological niche from their parents and attain the adult form by a more radical metamorphosis, after dropping to the sea-floor.\n\nQuestion: Where do juvenile platyctenids live?",
     "options": {
-      "A": "Among the sediment on the sea floor",
-      "B": "In the intertidal zone where their parents reside",
-      "C": "among the plankton",
-      "D": "Near the surface of the water, like their adult counterparts"
+      "A": "juvenile platyctenids live on the sea-floor",
+      "B": "juvenile platyctenids are found in coral reefs",
+      "C": "juvenile platyctenids inhabit the benthic zone",
+      "D": "among the plankton"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "Development of the fertilized eggs is direct, in other words there is no distinctive larval form, and juveniles of all groups generally resemble miniature cydippid adults. In the genus Beroe the juveniles, like the adults, lack tentacles and tentacle sheaths. In most species the juveniles gradually develop the body forms of their parents. In some groups, such as the flat, bottom-dwelling platyctenids, the juveniles behave more like true larvae, as they live among the plankton and thus occupy a different ecological niche from their parents and attain the adult form by a more radical metamorphosis, after dropping to the sea-floor.",
       "question": "Where do juvenile platyctenids live?",
@@ -343,12 +343,12 @@
     "id": "squad_mcq_21",
     "question": "Context: In November 2006, the Victorian Legislative Council elections were held under a new multi-member proportional representation system. The State of Victoria was divided into eight electorates with each electorate represented by five representatives elected by Single Transferable Vote. The total number of upper house members was reduced from 44 to 40 and their term of office is now the same as the lower house members—four years. Elections for the Victorian Parliament are now fixed and occur in November every four years. Prior to the 2006 election, the Legislative Council consisted of 44 members elected to eight-year terms from 22 two-member electorates.\n\nQuestion: How often are elections held for the Victorian Parliament?",
     "options": {
-      "A": "every 8 years",
-      "B": "every 6 years (in even years)",
-      "C": "every four years",
-      "D": "every 5 years starting from 2008"
+      "A": "every six years",
+      "B": "every four years",
+      "C": "every two years",
+      "D": "in alternate years"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "In November 2006, the Victorian Legislative Council elections were held under a new multi-member proportional representation system. The State of Victoria was divided into eight electorates with each electorate represented by five representatives elected by Single Transferable Vote. The total number of upper house members was reduced from 44 to 40 and their term of office is now the same as the lower house members—four years. Elections for the Victorian Parliament are now fixed and occur in November every four years. Prior to the 2006 election, the Legislative Council consisted of 44 members elected to eight-year terms from 22 two-member electorates.",
       "question": "How often are elections held for the Victorian Parliament?",
@@ -360,12 +360,12 @@
     "id": "squad_mcq_22",
     "question": "Context: Through combining the definition of electric current as the time rate of change of electric charge, a rule of vector multiplication called Lorentz's Law describes the force on a charge moving in a magnetic field. The connection between electricity and magnetism allows for the description of a unified electromagnetic force that acts on a charge. This force can be written as a sum of the electrostatic force (due to the electric field) and the magnetic force (due to the magnetic field). Fully stated, this is the law:\n\nQuestion: What magnetic and electric force acts on a charge?",
     "options": {
-      "A": "unified electromagnetic",
-      "B": "magnetic and electrostatic",
-      "C": "electromagnetic and gravitational",
-      "D": "electric and magnetic"
+      "A": "combined Lorentz force",
+      "B": "unified electromagnetic",
+      "C": "electric and magnetic forces separately",
+      "D": "electromagnetic force due to electric field only"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "Through combining the definition of electric current as the time rate of change of electric charge, a rule of vector multiplication called Lorentz's Law describes the force on a charge moving in a magnetic field. The connection between electricity and magnetism allows for the description of a unified electromagnetic force that acts on a charge. This force can be written as a sum of the electrostatic force (due to the electric field) and the magnetic force (due to the magnetic field). Fully stated, this is the law:",
       "question": "What magnetic and electric force acts on a charge?",
@@ -377,12 +377,12 @@
     "id": "squad_mcq_23",
     "question": "Context: Kublai Khan promoted commercial, scientific, and cultural growth. He supported the merchants of the Silk Road trade network by protecting the Mongol postal system, constructing infrastructure, providing loans that financed trade caravans, and encouraging the circulation of paper banknotes (鈔, Chao). Pax Mongolica, Mongol peace, enabled the spread of technologies, commodities, and culture between China and the West. Kublai expanded the Grand Canal from southern China to Daidu in the north. Mongol rule was cosmopolitan under Kublai Khan. He welcomed foreign visitors to his court, such as the Venetian merchant Marco Polo, who wrote the most influential European account of Yuan China. Marco Polo's travels would later inspire many others like Christopher Columbus to chart a passage to the Far East in search of its legendary wealth.\n\nQuestion: What kinds of growth did Kublai encourage?",
     "options": {
-      "A": "Kublai Khan promoted the development of a strong military presence, as well as the expansion of his empire through conquests and strategic alliances.",
-      "B": "commercial, scientific, and cultural",
-      "C": "The Mongol leader focused on the advancement of agriculture and the establishment of a centralized agricultural system.",
-      "D": "Kublai Khan prioritized the growth of education and the establishment of universities to promote intellectual pursuits."
+      "A": "Kublai Khan also encouraged the growth of agriculture and mining industries",
+      "B": "The Mongol postal system and infrastructure development led to significant economic growth",
+      "C": "commercial, scientific, and cultural",
+      "D": "Kublai Khan's support for trade caravans led to the expansion of the Silk Road into Africa"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "Kublai Khan promoted commercial, scientific, and cultural growth. He supported the merchants of the Silk Road trade network by protecting the Mongol postal system, constructing infrastructure, providing loans that financed trade caravans, and encouraging the circulation of paper banknotes (鈔, Chao). Pax Mongolica, Mongol peace, enabled the spread of technologies, commodities, and culture between China and the West. Kublai expanded the Grand Canal from southern China to Daidu in the north. Mongol rule was cosmopolitan under Kublai Khan. He welcomed foreign visitors to his court, such as the Venetian merchant Marco Polo, who wrote the most influential European account of Yuan China. Marco Polo's travels would later inspire many others like Christopher Columbus to chart a passage to the Far East in search of its legendary wealth.",
       "question": "What kinds of growth did Kublai encourage?",
@@ -394,12 +394,12 @@
     "id": "squad_mcq_24",
     "question": "Context: Doctor Who finally returned with the episode \"Rose\" on BBC One on 26 March 2005. There have since been nine further series in 2006–2008 and 2010–2015, and Christmas Day specials every year since 2005. No full series was filmed in 2009, although four additional specials starring David Tennant were made. In 2010, Steven Moffat replaced Davies as head writer and executive producer. In January 2016, Moffat announced that he would step down after the 2017 finale, to be replaced by Chris Chibnall in 2018. In addition, Series 10 will debut in Spring 2017, with a Christmas special broadcast in 2016.\n\nQuestion: What was the name of the first episode of the new Doctor Who series?",
     "options": {
-      "A": "The End of Time",
-      "B": "Rose",
-      "C": "The Christmas Invasion",
-      "D": "The Runaway Bride"
+      "A": "Rose",
+      "B": "Doomsday",
+      "C": "The End of Time",
+      "D": "The Time War"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "Doctor Who finally returned with the episode \"Rose\" on BBC One on 26 March 2005. There have since been nine further series in 2006–2008 and 2010–2015, and Christmas Day specials every year since 2005. No full series was filmed in 2009, although four additional specials starring David Tennant were made. In 2010, Steven Moffat replaced Davies as head writer and executive producer. In January 2016, Moffat announced that he would step down after the 2017 finale, to be replaced by Chris Chibnall in 2018. In addition, Series 10 will debut in Spring 2017, with a Christmas special broadcast in 2016.",
       "question": "What was the name of the first episode of the new Doctor Who series?",
@@ -411,12 +411,12 @@
     "id": "squad_mcq_25",
     "question": "Context: Southern California consists of one Combined Statistical Area, eight Metropolitan Statistical Areas, one international metropolitan area, and multiple metropolitan divisions. The region is home to two extended metropolitan areas that exceed five million in population. These are the Greater Los Angeles Area at 17,786,419, and San Diego–Tijuana at 5,105,768. Of these metropolitan areas, the Los Angeles-Long Beach-Santa Ana metropolitan area, Riverside-San Bernardino-Ontario metropolitan area, and Oxnard-Thousand Oaks-Ventura metropolitan area form Greater Los Angeles; while the El Centro metropolitan area and San Diego-Carlsbad-San Marcos metropolitan area form the Southern Border Region. North of Greater Los Angeles are the Santa Barbara, San Luis Obispo, and Bakersfield metropolitan areas.\n\nQuestion: Each of the extended metropolitan areas has a population that exceeds what number?",
     "options": {
-      "A": "four million",
-      "B": "six million",
-      "C": "five million",
+      "A": "five million",
+      "B": "four million",
+      "C": "three point five million",
       "D": "ten million"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "Southern California consists of one Combined Statistical Area, eight Metropolitan Statistical Areas, one international metropolitan area, and multiple metropolitan divisions. The region is home to two extended metropolitan areas that exceed five million in population. These are the Greater Los Angeles Area at 17,786,419, and San Diego–Tijuana at 5,105,768. Of these metropolitan areas, the Los Angeles-Long Beach-Santa Ana metropolitan area, Riverside-San Bernardino-Ontario metropolitan area, and Oxnard-Thousand Oaks-Ventura metropolitan area form Greater Los Angeles; while the El Centro metropolitan area and San Diego-Carlsbad-San Marcos metropolitan area form the Southern Border Region. North of Greater Los Angeles are the Santa Barbara, San Luis Obispo, and Bakersfield metropolitan areas.",
       "question": "Each of the extended metropolitan areas has a population that exceeds what number?",
@@ -428,10 +428,10 @@
     "id": "squad_mcq_26",
     "question": "Context: Some civil disobedience defendants choose to make a defiant speech, or a speech explaining their actions, in allocution. In U.S. v. Burgos-Andujar, a defendant who was involved in a movement to stop military exercises by trespassing on U.S. Navy property argued to the court in allocution that \"the ones who are violating the greater law are the members of the Navy\". As a result, the judge increased her sentence from 40 to 60 days. This action was upheld because, according to the U.S. Court of Appeals for the First Circuit, her statement suggested a lack of remorse, an attempt to avoid responsibility for her actions, and even a likelihood of repeating her illegal actions. Some of the other allocution speeches given by the protesters complained about mistreatment from government officials.\n\nQuestion: Why is giving a defiant speech sometimes more harmful for the individual?",
     "options": {
-      "A": "making a direct attack on the authority of the court",
-      "B": "failing to express regret for past actions",
+      "A": "increased scrutiny from the prosecution",
+      "B": "a higher likelihood of being sentenced to a longer imprisonment term",
       "C": "lack of remorse",
-      "D": "inciting further unrest among the general public"
+      "D": "a greater chance of having her sentence extended by the court"
     },
     "correct_answer_letter": "C",
     "original_squad_data": {
@@ -445,12 +445,12 @@
     "id": "squad_mcq_27",
     "question": "Context: The correlation between capitalism, aristocracy, and imperialism has long been debated among historians and political theorists. Much of the debate was pioneered by such theorists as J. A. Hobson (1858–1940), Joseph Schumpeter (1883–1950), Thorstein Veblen (1857–1929), and Norman Angell (1872–1967). While these non-Marxist writers were at their most prolific before World War I, they remained active in the interwar years. Their combined work informed the study of imperialism and it's impact on Europe, as well as contributed to reflections on the rise of the military-political complex in the United States from the 1950s. Hobson argued that domestic social reforms could cure the international disease of imperialism by removing its economic foundation. Hobson theorized that state intervention through taxation could boost broader consumption, create wealth, and encourage a peaceful, tolerant, multipolar world order.\n\nQuestion: When were Joseph Schumpeter and Norman Angell at their most prolific writing period?",
     "options": {
-      "A": "before World War I",
-      "B": "Not before World War I",
-      "C": "Alternative to before World War I",
-      "D": "Different from before World War I"
+      "A": "after World War I",
+      "B": "before World War I",
+      "C": "during the Great Depression",
+      "D": "in the post-World War II era"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "The correlation between capitalism, aristocracy, and imperialism has long been debated among historians and political theorists. Much of the debate was pioneered by such theorists as J. A. Hobson (1858–1940), Joseph Schumpeter (1883–1950), Thorstein Veblen (1857–1929), and Norman Angell (1872–1967). While these non-Marxist writers were at their most prolific before World War I, they remained active in the interwar years. Their combined work informed the study of imperialism and it's impact on Europe, as well as contributed to reflections on the rise of the military-political complex in the United States from the 1950s. Hobson argued that domestic social reforms could cure the international disease of imperialism by removing its economic foundation. Hobson theorized that state intervention through taxation could boost broader consumption, create wealth, and encourage a peaceful, tolerant, multipolar world order.",
       "question": "When were Joseph Schumpeter and Norman Angell at their most prolific writing period?",
@@ -462,10 +462,10 @@
     "id": "squad_mcq_28",
     "question": "Context: In a purely capitalist mode of production (i.e. where professional and labor organizations cannot limit the number of workers) the workers wages will not be controlled by these organizations, or by the employer, but rather by the market. Wages work in the same way as prices for any other good. Thus, wages can be considered as a function of market price of skill. And therefore, inequality is driven by this price. Under the law of supply and demand, the price of skill is determined by a race between the demand for the skilled worker and the supply of the skilled worker. \"On the other hand, markets can also concentrate wealth, pass environmental costs on to society, and abuse workers and consumers.\" \"Markets, by themselves, even when they are stable, often lead to high levels of inequality, outcomes that are widely viewed as unfair.\" Employers who offer a below market wage will find that their business is chronically understaffed. Their competitors will take advantage of the situation by offering a higher wage the best of their labor. For a businessman who has the profit motive as the prime interest, it is a losing proposition to offer below or above market wages to workers.\n\nQuestion: How do competing businesses attract workers?",
     "options": {
-      "A": "developing a comprehensive benefits package",
+      "A": "the business with the most innovative technology",
       "B": "offering a higher wage",
-      "C": "increasing work-life balance through flexible scheduling",
-      "D": "offering greater opportunities for career advancement"
+      "C": "by offering more comprehensive benefits packages",
+      "D": "by investing in employee training and development programs"
     },
     "correct_answer_letter": "B",
     "original_squad_data": {
@@ -479,12 +479,12 @@
     "id": "squad_mcq_29",
     "question": "Context: For the third straight season, the number one seeds from both conferences met in the Super Bowl. The Carolina Panthers became one of only ten teams to have completed a regular season with only one loss, and one of only six teams to have acquired a 15–1 record, while the Denver Broncos became one of four teams to have made eight appearances in the Super Bowl. The Broncos made their second Super Bowl appearance in three years, having reached Super Bowl XLVIII, while the Panthers made their second Super Bowl appearance in franchise history, their other appearance being Super Bowl XXXVIII. Coincidentally, both teams were coached by John Fox in their last Super Bowl appearance prior to Super Bowl 50.\n\nQuestion: How many teams up to Super Bowl 50 have been to the championship game eight times?",
     "options": {
-      "A": "three",
-      "B": "five",
-      "C": "six",
-      "D": "four"
+      "A": "four",
+      "B": "Not four",
+      "C": "Alternative to four",
+      "D": "Different from four"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "For the third straight season, the number one seeds from both conferences met in the Super Bowl. The Carolina Panthers became one of only ten teams to have completed a regular season with only one loss, and one of only six teams to have acquired a 15–1 record, while the Denver Broncos became one of four teams to have made eight appearances in the Super Bowl. The Broncos made their second Super Bowl appearance in three years, having reached Super Bowl XLVIII, while the Panthers made their second Super Bowl appearance in franchise history, their other appearance being Super Bowl XXXVIII. Coincidentally, both teams were coached by John Fox in their last Super Bowl appearance prior to Super Bowl 50.",
       "question": "How many teams up to Super Bowl 50 have been to the championship game eight times?",
@@ -497,11 +497,11 @@
     "question": "Context: The weight of boilers and condensers generally makes the power-to-weight ratio of a steam plant lower than for internal combustion engines. For mobile applications steam has been largely superseded by internal combustion engines or electric motors. However, most electric power is generated using steam turbine plant, so that indirectly the world's industry is still dependent on steam power. Recent concerns about fuel sources and pollution have incited a renewed interest in steam both as a component of cogeneration processes and as a prime mover. This is becoming known as the Advanced Steam movement.[citation needed]\n\nQuestion: What plants create most electric power?",
     "options": {
       "A": "internal combustion engines",
-      "B": "electric motors",
-      "C": "combined heat and power plants",
-      "D": "steam turbine"
+      "B": "steam turbine",
+      "C": "electric motors",
+      "D": "gas turbine plants"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "The weight of boilers and condensers generally makes the power-to-weight ratio of a steam plant lower than for internal combustion engines. For mobile applications steam has been largely superseded by internal combustion engines or electric motors. However, most electric power is generated using steam turbine plant, so that indirectly the world's industry is still dependent on steam power. Recent concerns about fuel sources and pollution have incited a renewed interest in steam both as a component of cogeneration processes and as a prime mover. This is becoming known as the Advanced Steam movement.[citation needed]",
       "question": "What plants create most electric power?",
@@ -513,12 +513,12 @@
     "id": "squad_mcq_31",
     "question": "Context: In the Sandgate area, to the east of the city and beside the river, resided the close-knit community of keelmen and their families. They were so called because they worked on the keels, boats that were used to transfer coal from the river banks to the waiting colliers, for export to London and elsewhere. In the 1630s about 7,000 out of 20,000 inhabitants of Newcastle died of plague, more than one-third of the population. Specifically within the year 1636, it is roughly estimated with evidence held by the Society of Antiquaries that 47% of the then population of Newcastle died from the epidemic; this may also have been the most devastating loss in any British City in this period.\n\nQuestion: The epidemic in Newcastle was the most what in any British city at the time?",
     "options": {
-      "A": "most severe economic impact",
-      "B": "largest population migration",
-      "C": "devastating loss",
-      "D": "most destructive environmental change"
+      "A": "most notable decline",
+      "B": "devastating loss",
+      "C": "most severe outbreak",
+      "D": "most extensive destruction"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "In the Sandgate area, to the east of the city and beside the river, resided the close-knit community of keelmen and their families. They were so called because they worked on the keels, boats that were used to transfer coal from the river banks to the waiting colliers, for export to London and elsewhere. In the 1630s about 7,000 out of 20,000 inhabitants of Newcastle died of plague, more than one-third of the population. Specifically within the year 1636, it is roughly estimated with evidence held by the Society of Antiquaries that 47% of the then population of Newcastle died from the epidemic; this may also have been the most devastating loss in any British City in this period.",
       "question": "The epidemic in Newcastle was the most what in any British city at the time?",
@@ -530,12 +530,12 @@
     "id": "squad_mcq_32",
     "question": "Context: In 2007, BSkyB and Virgin Media became involved in a dispute over the carriage of Sky channels on cable TV. The failure to renew the existing carriage agreements negotiated with NTL and Telewest resulted in Virgin Media removing the basic channels from the network on 1 March 2007. Virgin Media claimed that BSkyB had substantially increased the asking price for the channels, a claim which BSkyB denied, on the basis that their new deal offered \"substantially more value\" by including HD channels and Video On Demand content which was not previously carried by cable.\n\nQuestion: What additional srevice did BSkyB offer besides Video on Demand that they claimed offered \"substantially more value\"?",
     "options": {
-      "A": "Increased customer support through dedicated phone lines",
-      "B": "Enhanced parental controls through advanced filtering technology",
-      "C": "Additional premium content via exclusive partnerships with major movie studios",
-      "D": "HD channels"
+      "A": "additional 4K channels",
+      "B": "extensive on-demand film library",
+      "C": "HD channels",
+      "D": "free subscription to premium sports packages"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "In 2007, BSkyB and Virgin Media became involved in a dispute over the carriage of Sky channels on cable TV. The failure to renew the existing carriage agreements negotiated with NTL and Telewest resulted in Virgin Media removing the basic channels from the network on 1 March 2007. Virgin Media claimed that BSkyB had substantially increased the asking price for the channels, a claim which BSkyB denied, on the basis that their new deal offered \"substantially more value\" by including HD channels and Video On Demand content which was not previously carried by cable.",
       "question": "What additional srevice did BSkyB offer besides Video on Demand that they claimed offered \"substantially more value\"?",
@@ -547,12 +547,12 @@
     "id": "squad_mcq_33",
     "question": "Context: In 1926, Tesla commented on the ills of the social subservience of women and the struggle of women toward gender equality, and indicated that humanity's future would be run by \"Queen Bees.\" He believed that women would become the dominant sex in the future.\n\nQuestion: Who did Tesla think would run the world of the future?",
     "options": {
-      "A": "liberated men",
-      "B": "the global community",
-      "C": "women",
-      "D": "independent nations"
+      "A": "The intelligent and resourceful men who have proven their capabilities throughout history",
+      "B": "The collective efforts of humanity's most advanced scientists and thinkers",
+      "C": "The educated and enlightened elite who have demonstrated leadership skills in various fields",
+      "D": "women"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "In 1926, Tesla commented on the ills of the social subservience of women and the struggle of women toward gender equality, and indicated that humanity's future would be run by \"Queen Bees.\" He believed that women would become the dominant sex in the future.",
       "question": "Who did Tesla think would run the world of the future?",
@@ -564,12 +564,12 @@
     "id": "squad_mcq_34",
     "question": "Context: HT does not engage in armed jihad or work for a democratic system, but works to take power through \"ideological struggle\" to change Muslim public opinion, and in particular through elites who will \"facilitate\" a \"change of the government,\" i.e., launch a \"bloodless\" coup. It allegedly attempted and failed such coups in 1968 and 1969 in Jordan, and in 1974 in Egypt, and is now banned in both countries. But many HT members have gone on to join terrorist groups and many jihadi terrorists have cited HT as their key influence.\n\nQuestion: What have many HT members graduated to joining?",
     "options": {
-      "A": "have joined左翼政治运动",
-      "B": "terrorist groups",
-      "C": "have become influential non-violent activists",
-      "D": "have started their own NGOs"
+      "A": "have gone on to join democratic movements",
+      "B": "have become influential lobbyists for reform",
+      "C": "terrorist groups",
+      "D": "have established community development organizations"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "HT does not engage in armed jihad or work for a democratic system, but works to take power through \"ideological struggle\" to change Muslim public opinion, and in particular through elites who will \"facilitate\" a \"change of the government,\" i.e., launch a \"bloodless\" coup. It allegedly attempted and failed such coups in 1968 and 1969 in Jordan, and in 1974 in Egypt, and is now banned in both countries. But many HT members have gone on to join terrorist groups and many jihadi terrorists have cited HT as their key influence.",
       "question": "What have many HT members graduated to joining?",
@@ -581,12 +581,12 @@
     "id": "squad_mcq_35",
     "question": "Context: The costume collection is the most comprehensive in Britain, containing over 14,000 outfits plus accessories, mainly dating from 1600 to the present. Costume sketches, design notebooks, and other works on paper are typically held by the Word and Image department. Because everyday clothing from previous eras has not generally survived, the collection is dominated by fashionable clothes made for special occasions. One of the first significant gifts of costume came in 1913 when the V&A received the Talbot Hughes collection containing 1,442 costumes and items as a gift from Harrods following its display at the nearby department store.\n\nQuestion: Approximately how many items are in the costume collection of the V&A?",
     "options": {
-      "A": "The collection consists of around 12,000 items, with many more items donated since the 1970s.",
-      "B": "The V&A's costume collection spans over 15,000 pieces, including items from its extensive holdings in fashion and textiles.",
-      "C": "The collection comprises over 18,000 outfits, including many rare and historically significant pieces acquired through various donations and purchases.",
-      "D": "over 14,000"
+      "A": "The V&A's costume collection contains around 18,000 items, including many historical pieces that have been beautifully preserved.",
+      "B": "over 14,000",
+      "C": "The collection has approximately 12,000 items, with a focus on period-specific garments and accessories.",
+      "D": "The V&A's costume collection comprises over 16,000 items, covering a wide range of historical periods and special occasions."
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "The costume collection is the most comprehensive in Britain, containing over 14,000 outfits plus accessories, mainly dating from 1600 to the present. Costume sketches, design notebooks, and other works on paper are typically held by the Word and Image department. Because everyday clothing from previous eras has not generally survived, the collection is dominated by fashionable clothes made for special occasions. One of the first significant gifts of costume came in 1913 when the V&A received the Talbot Hughes collection containing 1,442 costumes and items as a gift from Harrods following its display at the nearby department store.",
       "question": "Approximately how many items are in the costume collection of the V&A?",
@@ -598,12 +598,12 @@
     "id": "squad_mcq_36",
     "question": "Context: Fresno has three large public parks, two in the city limits and one in county land to the southwest. Woodward Park, which features the Shinzen Japanese Gardens, numerous picnic areas and several miles of trails, is in North Fresno and is adjacent to the San Joaquin River Parkway. Roeding Park, near Downtown Fresno, is home to the Fresno Chaffee Zoo, and Rotary Storyland and Playland. Kearney Park is the largest of the Fresno region's park system and is home to historic Kearney Mansion and plays host to the annual Civil War Revisited, the largest reenactment of the Civil War in the west coast of the U.S.\n\nQuestion: Which park is home to the Fresno Chafffee Zoo?",
     "options": {
-      "A": "Shinzen Japanese Gardens",
-      "B": "Kearney Park",
-      "C": "Roeding Park",
-      "D": "Woodward Park"
+      "A": "Woodward Park",
+      "B": "Kearney Park is not a zoo",
+      "C": "Northridge Park",
+      "D": "Roeding Park"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "Fresno has three large public parks, two in the city limits and one in county land to the southwest. Woodward Park, which features the Shinzen Japanese Gardens, numerous picnic areas and several miles of trails, is in North Fresno and is adjacent to the San Joaquin River Parkway. Roeding Park, near Downtown Fresno, is home to the Fresno Chaffee Zoo, and Rotary Storyland and Playland. Kearney Park is the largest of the Fresno region's park system and is home to historic Kearney Mansion and plays host to the annual Civil War Revisited, the largest reenactment of the Civil War in the west coast of the U.S.",
       "question": "Which park is home to the Fresno Chafffee Zoo?",
@@ -615,12 +615,12 @@
     "id": "squad_mcq_37",
     "question": "Context: For many geologic applications, isotope ratios of radioactive elements are measured in minerals that give the amount of time that has passed since a rock passed through its particular closure temperature, the point at which different radiometric isotopes stop diffusing into and out of the crystal lattice. These are used in geochronologic and thermochronologic studies. Common methods include uranium-lead dating, potassium-argon dating, argon-argon dating and uranium-thorium dating. These methods are used for a variety of applications. Dating of lava and volcanic ash layers found within a stratigraphic sequence can provide absolute age data for sedimentary rock units which do not contain radioactive isotopes and calibrate relative dating techniques. These methods can also be used to determine ages of pluton emplacement. Thermochemical techniques can be used to determine temperature profiles within the crust, the uplift of mountain ranges, and paleotopography.\n\nQuestion: The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called what?",
     "options": {
-      "A": "particular closure temperature",
-      "B": "critical diffusion point",
-      "C": "thermal equilibrium threshold",
-      "D": "phase transition temperature"
+      "A": "geologic closure time",
+      "B": "particular closure temperature",
+      "C": "radioactive equilibrium temperature",
+      "D": "thermal phase transition"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "For many geologic applications, isotope ratios of radioactive elements are measured in minerals that give the amount of time that has passed since a rock passed through its particular closure temperature, the point at which different radiometric isotopes stop diffusing into and out of the crystal lattice. These are used in geochronologic and thermochronologic studies. Common methods include uranium-lead dating, potassium-argon dating, argon-argon dating and uranium-thorium dating. These methods are used for a variety of applications. Dating of lava and volcanic ash layers found within a stratigraphic sequence can provide absolute age data for sedimentary rock units which do not contain radioactive isotopes and calibrate relative dating techniques. These methods can also be used to determine ages of pluton emplacement. Thermochemical techniques can be used to determine temperature profiles within the crust, the uplift of mountain ranges, and paleotopography.",
       "question": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called what?",
@@ -632,12 +632,12 @@
     "id": "squad_mcq_38",
     "question": "Context: The functions of the teacher's colleges may include setting out clear standards of practice, providing for the ongoing education of teachers, investigating complaints involving members, conducting hearings into allegations of professional misconduct and taking appropriate disciplinary action and accrediting teacher education programs. In many situations teachers in publicly funded schools must be members in good standing with the college, and private schools may also require their teachers to be college peoples. In other areas these roles may belong to the State Board of Education, the Superintendent of Public Instruction, the State Education Agency or other governmental bodies. In still other areas Teaching Unions may be responsible for some or all of these duties.\n\nQuestion: What could someone be investigated for?",
     "options": {
-      "A": "allegations of financial misconduct",
-      "B": "allegations of unprofessional behavior",
-      "C": "allegations of professional misconduct",
-      "D": "allegations of lack of certification"
+      "A": "allegations of professional misconduct",
+      "B": "allegations of financial misconduct",
+      "C": "allegations of condoning unprofessional behavior",
+      "D": "allegations of violating school policies"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "The functions of the teacher's colleges may include setting out clear standards of practice, providing for the ongoing education of teachers, investigating complaints involving members, conducting hearings into allegations of professional misconduct and taking appropriate disciplinary action and accrediting teacher education programs. In many situations teachers in publicly funded schools must be members in good standing with the college, and private schools may also require their teachers to be college peoples. In other areas these roles may belong to the State Board of Education, the Superintendent of Public Instruction, the State Education Agency or other governmental bodies. In still other areas Teaching Unions may be responsible for some or all of these duties.",
       "question": "What could someone be investigated for?",
@@ -650,11 +650,11 @@
     "question": "Context: Neoclassical economics views inequalities in the distribution of income as arising from differences in value added by labor, capital and land. Within labor income distribution is due to differences in value added by different classifications of workers. In this perspective, wages and profits are determined by the marginal value added of each economic actor (worker, capitalist/business owner, landlord). Thus, in a market economy, inequality is a reflection of the productivity gap between highly-paid professions and lower-paid professions.\n\nQuestion: What are examples of economic actors?",
     "options": {
       "A": "entrepreneur",
-      "B": "worker, capitalist/business owner, landlord",
-      "C": "small business owner",
-      "D": "investor"
+      "B": "small business owner",
+      "C": "contractor",
+      "D": "worker, capitalist/business owner, landlord"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "Neoclassical economics views inequalities in the distribution of income as arising from differences in value added by labor, capital and land. Within labor income distribution is due to differences in value added by different classifications of workers. In this perspective, wages and profits are determined by the marginal value added of each economic actor (worker, capitalist/business owner, landlord). Thus, in a market economy, inequality is a reflection of the productivity gap between highly-paid professions and lower-paid professions.",
       "question": "What are examples of economic actors?",
@@ -666,12 +666,12 @@
     "id": "squad_mcq_40",
     "question": "Context: Disorders of the immune system can result in autoimmune diseases, inflammatory diseases and cancer. Immunodeficiency occurs when the immune system is less active than normal, resulting in recurring and life-threatening infections. In humans, immunodeficiency can either be the result of a genetic disease such as severe combined immunodeficiency, acquired conditions such as HIV/AIDS, or the use of immunosuppressive medication. In contrast, autoimmunity results from a hyperactive immune system attacking normal tissues as if they were foreign organisms. Common autoimmune diseases include Hashimoto's thyroiditis, rheumatoid arthritis, diabetes mellitus type 1, and systemic lupus erythematosus. Immunology covers the study of all aspects of the immune system.\n\nQuestion: What field involves the study of the immune system?",
     "options": {
-      "A": "Allergology",
-      "B": "Immunology",
-      "C": "Autoimmunology",
-      "D": "Infectious Disease"
+      "A": "Biochemistry and Molecular Biology",
+      "B": "Pathology and Infectious Disease",
+      "C": "Immunology",
+      "D": "Cancer Research and Genetics"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "Disorders of the immune system can result in autoimmune diseases, inflammatory diseases and cancer. Immunodeficiency occurs when the immune system is less active than normal, resulting in recurring and life-threatening infections. In humans, immunodeficiency can either be the result of a genetic disease such as severe combined immunodeficiency, acquired conditions such as HIV/AIDS, or the use of immunosuppressive medication. In contrast, autoimmunity results from a hyperactive immune system attacking normal tissues as if they were foreign organisms. Common autoimmune diseases include Hashimoto's thyroiditis, rheumatoid arthritis, diabetes mellitus type 1, and systemic lupus erythematosus. Immunology covers the study of all aspects of the immune system.",
       "question": "What field involves the study of the immune system?",
@@ -683,12 +683,12 @@
     "id": "squad_mcq_41",
     "question": "Context: Dendritic cells (DC) are phagocytes in tissues that are in contact with the external environment; therefore, they are located mainly in the skin, nose, lungs, stomach, and intestines. They are named for their resemblance to neuronal dendrites, as both have many spine-like projections, but dendritic cells are in no way connected to the nervous system. Dendritic cells serve as a link between the bodily tissues and the innate and adaptive immune systems, as they present antigens to T cells, one of the key cell types of the adaptive immune system.\n\nQuestion: What are the phagocytes that are located in tissues in contact with the external environment called?",
     "options": {
-      "A": "Dendritic cells",
-      "B": "Macrophages",
-      "C": "Epithelial cells",
-      "D": "Blast cells"
+      "A": "Macrophages",
+      "B": "Neutrophils with specialized dendritic features",
+      "C": "Epithelial immune cells",
+      "D": "Dendritic cells"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "Dendritic cells (DC) are phagocytes in tissues that are in contact with the external environment; therefore, they are located mainly in the skin, nose, lungs, stomach, and intestines. They are named for their resemblance to neuronal dendrites, as both have many spine-like projections, but dendritic cells are in no way connected to the nervous system. Dendritic cells serve as a link between the bodily tissues and the innate and adaptive immune systems, as they present antigens to T cells, one of the key cell types of the adaptive immune system.",
       "question": "What are the phagocytes that are located in tissues in contact with the external environment called?",
@@ -700,10 +700,10 @@
     "id": "squad_mcq_42",
     "question": "Context: From 1530 a royal act restricted all shipments of coal from Tyneside to Newcastle Quayside, giving a monopoly in the coal trade to a cartel of Newcastle burgesses known as the Hostmen. This monopoly, which lasted for a considerable time, helped Newcastle prosper and develop into a major town. The phrase taking coals to Newcastle was first recorded contextually in 1538. The phrase itself means a pointless pursuit. In the 18th century American Timothy Dexter, an entrepreneur, widely regarded as an eccentric, defied this idiom. He was persuaded to sail a shipment of coal to Newcastle by merchants plotting to ruin him; however his shipment arrived on the Tyne during a strike that had crippled local production; unexpectedly he made a considerable profit.\n\nQuestion: What did the merchants of Newcastle plot to do to Timothy Dexter?",
     "options": {
-      "A": "sell him a railroad to China",
-      "B": "set him up for a British royal investigation",
+      "A": "persuade him to take on a second shipment",
+      "B": "help him establish a rival coal cartel",
       "C": "ruin him",
-      "D": "drive him mad with uncertainty"
+      "D": "force him to pay an excessive toll on his shipment"
     },
     "correct_answer_letter": "C",
     "original_squad_data": {
@@ -717,12 +717,12 @@
     "id": "squad_mcq_43",
     "question": "Context: Tesla was the fourth of five children. He had an older brother named Dane and three sisters, Milka, Angelina and Marica. Dane was killed in a horse-riding accident when Nikola was five. In 1861, Tesla attended the \"Lower\" or \"Primary\" School in Smiljan where he studied German, arithmetic, and religion. In 1862, the Tesla family moved to Gospić, Austrian Empire, where Tesla's father worked as a pastor. Nikola completed \"Lower\" or \"Primary\" School, followed by the \"Lower Real Gymnasium\" or \"Normal School.\"\n\nQuestion: What job did Tesla's father have in Gospic?",
     "options": {
-      "A": "school teacher",
-      "B": "professor of physics",
-      "C": "imperial inspector",
-      "D": "pastor"
+      "A": "minister",
+      "B": "priest",
+      "C": "pastor",
+      "D": "curate"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "Tesla was the fourth of five children. He had an older brother named Dane and three sisters, Milka, Angelina and Marica. Dane was killed in a horse-riding accident when Nikola was five. In 1861, Tesla attended the \"Lower\" or \"Primary\" School in Smiljan where he studied German, arithmetic, and religion. In 1862, the Tesla family moved to Gospić, Austrian Empire, where Tesla's father worked as a pastor. Nikola completed \"Lower\" or \"Primary\" School, followed by the \"Lower Real Gymnasium\" or \"Normal School.\"",
       "question": "What job did Tesla's father have in Gospic?",
@@ -734,10 +734,10 @@
     "id": "squad_mcq_44",
     "question": "Context: The Panthers used the San Jose State practice facility and stayed at the San Jose Marriott. The Broncos practiced at Stanford University and stayed at the Santa Clara Marriott.\n\nQuestion: Which hotel did the Panthers stay at for the Super Bowl?",
     "options": {
-      "A": "Cupertino Marriott",
+      "A": "Fairfield Inn & Suites in San Jose",
       "B": "San Jose Marriott.",
-      "C": "Mountain View Inn",
-      "D": "San Jose Fairmont"
+      "C": "Marriott Grand in Palo Alto",
+      "D": "Omni San Jose Hotel"
     },
     "correct_answer_letter": "B",
     "original_squad_data": {
@@ -751,12 +751,12 @@
     "id": "squad_mcq_45",
     "question": "Context: The conflict is known by multiple names. In British America, wars were often named after the sitting British monarch, such as King William's War or Queen Anne's War. As there had already been a King George's War in the 1740s, British colonists named the second war in King George's reign after their opponents, and it became known as the French and Indian War. This traditional name continues as the standard in the United States, but it obscures the fact that Indians fought on both sides of the conflict, and that this was part of the Seven Years' War, a much larger conflict between France and Great Britain. American historians generally use the traditional name or sometimes the Seven Years' War. Other, less frequently used names for the war include the Fourth Intercolonial War and the Great War for the Empire.\n\nQuestion: What are other alternative names for French and Indian War?",
     "options": {
-      "A": "King George's Rebellion",
-      "B": "American Colonies' Great Upset",
-      "C": "Fourth Intercolonial War and the Great War for the Empire",
-      "D": "Great Colonial Dispute"
+      "A": "Fourth Intercolonial War and the Great War for the Empire",
+      "B": "The Anglo-Cherokee War and the Great Colonial War",
+      "C": "The Seven Kingdoms War and the War for the Fiefdom",
+      "D": "The Transatlantic Conflict and the British-American Union War"
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "The conflict is known by multiple names. In British America, wars were often named after the sitting British monarch, such as King William's War or Queen Anne's War. As there had already been a King George's War in the 1740s, British colonists named the second war in King George's reign after their opponents, and it became known as the French and Indian War. This traditional name continues as the standard in the United States, but it obscures the fact that Indians fought on both sides of the conflict, and that this was part of the Seven Years' War, a much larger conflict between France and Great Britain. American historians generally use the traditional name or sometimes the Seven Years' War. Other, less frequently used names for the war include the Fourth Intercolonial War and the Great War for the Empire.",
       "question": "What are other alternative names for French and Indian War?",
@@ -768,12 +768,12 @@
     "id": "squad_mcq_46",
     "question": "Context: Southern California consists of a heavily developed urban environment, home to some of the largest urban areas in the state, along with vast areas that have been left undeveloped. It is the third most populated megalopolis in the United States, after the Great Lakes Megalopolis and the Northeastern megalopolis. Much of southern California is famous for its large, spread-out, suburban communities and use of automobiles and highways. The dominant areas are Los Angeles, Orange County, San Diego, and Riverside-San Bernardino, each of which is the center of its respective metropolitan area, composed of numerous smaller cities and communities. The urban area is also host to an international metropolitan region in the form of San Diego–Tijuana, created by the urban area spilling over into Baja California.\n\nQuestion: Outside of its use of automobiles, what else is southern California famous for using?",
     "options": {
-      "A": "buses and light rail",
-      "B": "high-speed trains and bike paths",
-      "C": "airports and seaports",
-      "D": "highways"
+      "A": "air travel",
+      "B": "highways",
+      "C": "waterways",
+      "D": "grid-based urban planning"
     },
-    "correct_answer_letter": "D",
+    "correct_answer_letter": "B",
     "original_squad_data": {
       "context": "Southern California consists of a heavily developed urban environment, home to some of the largest urban areas in the state, along with vast areas that have been left undeveloped. It is the third most populated megalopolis in the United States, after the Great Lakes Megalopolis and the Northeastern megalopolis. Much of southern California is famous for its large, spread-out, suburban communities and use of automobiles and highways. The dominant areas are Los Angeles, Orange County, San Diego, and Riverside-San Bernardino, each of which is the center of its respective metropolitan area, composed of numerous smaller cities and communities. The urban area is also host to an international metropolitan region in the form of San Diego–Tijuana, created by the urban area spilling over into Baja California.",
       "question": "Outside of its use of automobiles, what else is southern California famous for using?",
@@ -787,8 +787,8 @@
     "options": {
       "A": "Green",
       "B": "Smith",
-      "C": "Taylor",
-      "D": "Brooks"
+      "C": "Johnson",
+      "D": "Harrison"
     },
     "correct_answer_letter": "A",
     "original_squad_data": {
@@ -802,12 +802,12 @@
     "id": "squad_mcq_48",
     "question": "Context: After an unmanned LM test flight AS-206, a crew would fly the first Block II CSM and LM in a dual mission known as AS-207/208, or AS-278 (each spacecraft would be launched on a separate Saturn IB.) The Block II crew positions were titled Commander (CDR) Command Module Pilot (CMP) and Lunar Module Pilot (LMP). The astronauts would begin wearing a new Apollo spacesuit, designed to accommodate lunar extravehicular activity (EVA). The traditional visor helmet was replaced with a clear \"fishbowl\" type for greater visibility, and the lunar surface EVA suit would include a water-cooled undergarment.\n\nQuestion: How many people were on the test flight of the AS-206?",
     "options": {
-      "A": "two-person crew",
-      "B": "three-person team",
-      "C": "unmanned",
-      "D": "crew of four astronauts"
+      "A": "unmanned",
+      "B": "On the test flight of the AS-206, a crew of six astronauts were launched on a single Saturn IB rocket.",
+      "C": "A crew of two astronauts, including a Commander and a Lunar Module Pilot, were on board the AS-206 for the unmanned test flight.",
+      "D": "The AS-206 mission carried a team of three astronauts, including a Command Module Pilot and two Lunar Module Pilots, for a successful demonstration of crewed lunar landing."
     },
-    "correct_answer_letter": "C",
+    "correct_answer_letter": "A",
     "original_squad_data": {
       "context": "After an unmanned LM test flight AS-206, a crew would fly the first Block II CSM and LM in a dual mission known as AS-207/208, or AS-278 (each spacecraft would be launched on a separate Saturn IB.) The Block II crew positions were titled Commander (CDR) Command Module Pilot (CMP) and Lunar Module Pilot (LMP). The astronauts would begin wearing a new Apollo spacesuit, designed to accommodate lunar extravehicular activity (EVA). The traditional visor helmet was replaced with a clear \"fishbowl\" type for greater visibility, and the lunar surface EVA suit would include a water-cooled undergarment.",
       "question": "How many people were on the test flight of the AS-206?",
@@ -819,12 +819,12 @@
     "id": "squad_mcq_49",
     "question": "Context: As of the 2010 United States Census, southern California has a population of 22,680,010. Despite a reputation for high growth rates, southern California's rate grew less than the state average of 10.0% in the 2000s as California's growth became concentrated in the northern part of the state due to a stronger, tech-oriented economy in the Bay Area and an emerging Greater Sacramento region.\n\nQuestion: What is the state average growth rate?",
     "options": {
-      "A": "9.5% is the state average growth rate",
-      "B": "10.0%",
-      "C": "The state average growth rate in the 2000s was 9.8%",
-      "D": "According to the 2000 census, California's average growth rate was 9.0%"
+      "A": "9.5% annual growth rate due to increased migration from the Midwest",
+      "B": "an average annual increase of 9.8% as driven by the state's biotech industry",
+      "C": "10.0%",
+      "D": "a rate of 10.2% primarily fueled by the expansion of major cities in the Central Valley"
     },
-    "correct_answer_letter": "B",
+    "correct_answer_letter": "C",
     "original_squad_data": {
       "context": "As of the 2010 United States Census, southern California has a population of 22,680,010. Despite a reputation for high growth rates, southern California's rate grew less than the state average of 10.0% in the 2000s as California's growth became concentrated in the northern part of the state due to a stronger, tech-oriented economy in the Bay Area and an emerging Greater Sacramento region.",
       "question": "What is the state average growth rate?",
@@ -836,12 +836,12 @@
     "id": "squad_mcq_50",
     "question": "Context: The results of the Haensch study have since been confirmed and amended. Based on genetic evidence derived from Black Death victims in the East Smithfield burial site in England, Schuenemann et al. concluded in 2011 \"that the Black Death in medieval Europe was caused by a variant of Y. pestis that may no longer exist.\" A study published in Nature in October 2011 sequenced the genome of Y. pestis from plague victims and indicated that the strain that caused the Black Death is ancestral to most modern strains of the disease.\n\nQuestion: When was the study on sequenced Y genomes published?",
     "options": {
-      "A": "October 2011",
-      "B": "April 2011",
-      "C": "March 2012",
-      "D": "July 2010"
+      "A": "2010",
+      "B": "June 2011",
+      "C": "September 2012",
+      "D": "October 2011"
     },
-    "correct_answer_letter": "A",
+    "correct_answer_letter": "D",
     "original_squad_data": {
       "context": "The results of the Haensch study have since been confirmed and amended. Based on genetic evidence derived from Black Death victims in the East Smithfield burial site in England, Schuenemann et al. concluded in 2011 \"that the Black Death in medieval Europe was caused by a variant of Y. pestis that may no longer exist.\" A study published in Nature in October 2011 sequenced the genome of Y. pestis from plague victims and indicated that the strain that caused the Black Death is ancestral to most modern strains of the disease.",
       "question": "When was the study on sequenced Y genomes published?",
