@@ -25,4 +25,4 @@ Thumbs.db
 # Output files (optional - decide if you want to track these in Git)
 # If you want to version your output files, remove these lines or comment them out
 # *.json
-# *.csv
+# *.csv.env

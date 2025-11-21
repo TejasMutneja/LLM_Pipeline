@@ -251,7 +251,7 @@ if __name__ == "__main__":
     # Configuration
     DATASET_NAME = "squad"  # or "squad_v2" for SQuAD 2.0
     SPLIT = "validation"    # Use validation split for testing
-    NUM_QUESTIONS = 50      # Number of questions to convert
+    NUM_QUESTIONS = 400      # Number of questions to convert
     OUTPUT_FILE = "squad_mcq_questions.json"
     VERBOSE = True
     

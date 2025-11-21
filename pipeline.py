@@ -30,9 +30,11 @@ client = OpenAI(
 
 # ---
 
-# Block 2: Worker Functions (Updated to accept verbose flag)
-LLM1_MODEL = "meta-llama/Llama-3.2-3B-Instruct-Turbo"  # Use serverless model
-LLM2_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"  # Use serverless model
+# Block 2: Worker Functions (Updated with max_tokens fix)
+# --- UPDATED MODEL STRINGS ---
+LLM1_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo" 
+LLM2_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+# -----------------------------
 
 @traceable
 def generate_answer(model_name: str, question_text: str, options_text: str, verbose: bool = False):
@@ -40,7 +42,7 @@ def generate_answer(model_name: str, question_text: str, options_text: str, verb
     You are an expert exam-taker. Your task is to select the best possible answer from the given options.
 
     Follow this EXACT format for your response:
-    1. Write your step-by-step reasoning
+    1. Write your step-by-step reasoning (be concise).
     2. End your response with EXACTLY:
     Final Answer: (X)
 
@@ -50,9 +52,12 @@ def generate_answer(model_name: str, question_text: str, options_text: str, verb
     Your response MUST end with the Final Answer line in exactly this format."""
     full_prompt = f"{question_text}\n{options_text}"
     if verbose: print(f"  Asking {model_name} for initial answer...")
+    
+    # UPDATED: Added max_tokens=1024 to prevent cutoff
     response = client.chat.completions.create(
         model=model_name,
         temperature=0.1,
+        max_tokens=1024, 
         messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": full_prompt}]
     )
     return response.choices[0].message.content
@@ -74,16 +79,19 @@ def critique_and_revise_answer(model_name: str, question_text: str, options_text
         "Critically evaluate the peer's answer and provide your own definitive, final answer."
     )
     if verbose: print(f"  Asking {model_name} to critique and revise...")
+    
+    # UPDATED: Added max_tokens=1024 to prevent cutoff
     response = client.chat.completions.create(
         model=model_name,
         temperature=0.1,
+        max_tokens=1024,
         messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
     )
     return response.choices[0].message.content
 
 # ---
 
-# Block 3: Orchestrator function (Updated to accept verbose flag)
+# Block 3: Orchestrator function
 @traceable(run_type="chain")
 def mmlu_pipeline(question_data: dict, verbose: bool = False):
     MAX_ROUNDS = 10
@@ -188,12 +196,12 @@ def load_squad_mcq_questions(filepath: str, max_questions: int = None):
 
 if __name__ == "__main__":
     # --- SCRIPT CONFIGURATION ---
-    VERBOSE = False 
+    VERBOSE = False  # Set to False to hide valid debate logs
     
     # SQuAD MCQ Configuration
     USE_SQUAD_MCQ = True
     SQUAD_MCQ_FILE = "squad_mcq_questions.json"
-    NUM_QUESTIONS_TO_PROCESS = 50  # Reduced default since we're generating MCQs
+    NUM_QUESTIONS_TO_PROCESS = 400  # Requesting 400 questions
     
     # Fallback MMLU Configuration (if SQuAD MCQ not available)
     DATASET_NAME = "cais/mmlu"
@@ -211,6 +219,10 @@ if __name__ == "__main__":
             print("Falling back to MMLU dataset...")
             USE_SQUAD_MCQ = False
         else:
+            if len(mcq_questions) < NUM_QUESTIONS_TO_PROCESS:
+                print(f"\n[WARNING] You requested {NUM_QUESTIONS_TO_PROCESS} questions, but '{SQUAD_MCQ_FILE}' only contains {len(mcq_questions)}.")
+                print(f"Processing the available {len(mcq_questions)} questions.\n")
+            
             print(f"Starting evaluation for {len(mcq_questions)} SQuAD MCQ questions...")
 
     if not USE_SQUAD_MCQ:
@@ -238,6 +250,7 @@ if __name__ == "__main__":
         # Process SQuAD MCQ questions
         for i, mcq_item in enumerate(mcq_questions):
             if not VERBOSE:
+                # Simple progress indicator
                 print(f"Processing question {i+1}/{len(mcq_questions)}...", end='\r')
             
             question_data_for_pipeline = {
@@ -253,8 +266,8 @@ if __name__ == "__main__":
             try:
                 pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
             except Exception as e:
-                if VERBOSE: 
-                    print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
+                # --- CRITICAL FIX: Always print the error so we know why it failed ---
+                print(f"\n!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
                 pipeline_output = {"final_answer_for_evaluation": "ERROR"}
             
             result_summary = {**question_data_for_pipeline, "pipeline_output_details": pipeline_output}
@@ -280,7 +293,8 @@ if __name__ == "__main__":
             try:
                 pipeline_output = mmlu_pipeline(question_data_for_pipeline, verbose=VERBOSE)
             except Exception as e:
-                if VERBOSE: print(f"!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
+                # --- CRITICAL FIX: Always print the error so we know why it failed ---
+                print(f"\n!!!!!!!! ERROR processing pipeline for question ID {question_data_for_pipeline['id']}: {e} !!!!!!!!")
                 pipeline_output = {"final_answer_for_evaluation": "ERROR"}
             
             result_summary = {**question_data_for_pipeline, "pipeline_output_details": pipeline_output}
