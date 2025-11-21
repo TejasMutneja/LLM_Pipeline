@@ -32,8 +32,8 @@ client = OpenAI(
 
 # Block 2: Worker Functions (Updated with max_tokens fix)
 # --- UPDATED MODEL STRINGS ---
-LLM1_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo" 
-LLM2_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+LLM1_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+LLM2_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo" 
 # -----------------------------
 
 @traceable
